@@ -41,7 +41,7 @@ const Hero = () => {
         </p>
         <a
           href="#products"
-          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#CD7F32] hover:bg-blue-700"
+          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#CD7F32] hover:bg-orange-700"
         >
           Explore Our Products
           <FaArrowRight className="ml-2" />

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaHome, FaTools, FaUser, FaStar, FaEnvelope } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
-import logo from "../assets/images/ekusemelogo.png"; // Ensure your logo is in this path
+import logo from "../assets/images/ekusemlogo.png"; // Ensure your logo is in this path
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
