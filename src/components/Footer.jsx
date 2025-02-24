@@ -63,7 +63,7 @@ const Footer = () => {
         
         <div className="mt-8 border-t border-[#FFF3E0] pt-8">
           <p className="text-base text-[#FFF3E0] text-center">
-            © 2024 GingerSlice Pro. All rights reserved.
+            © 2025 GingerSlice Pro. All rights reserved.
           </p>
         </div>
       </div>
