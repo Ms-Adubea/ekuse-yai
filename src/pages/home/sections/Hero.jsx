@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
+import welding from '../../../assets/images/welding.jpeg';
+import cuttingMetal from '../../../assets/images/cutting-metal-with-plasma-equipment-plant.jpg';
+import blackMan from '../../../assets/images/black-man.jpg';
+import portraitMan from '../../../assets/images/portrait-man.jpg';
+import slider5 from '../../../assets/images/slider5.jpg';
 
 const images = [
-  "/src/assets/images/welding.jpeg",
-  "/src/assets/images/cutting-metal-with-plasma-equipment-plant.jpg",
-  "/src/assets/images/black-man.jpg",
-  "/src/assets/images/portrait-man.jpg",
-  "/src/assets/images/slider5.jpg",
+  welding,
+  cuttingMetal,
+  blackMan,
+  portraitMan,
+  slider5
 ];
 
 const Hero = () => {

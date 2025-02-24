@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import ginEquipment from '../../../assets/images/gin-equipment.jpg';
 
 const AboutProducts = () => {
   const features = [
@@ -51,7 +52,7 @@ const AboutProducts = () => {
           {/* Product Image */}
           <div className="relative">
             <img
-              src="/src/assets/images/gin-equipment.jpg" // Make sure to add your product image
+              src={ginEquipment}
               alt="GingerSlice Pro"
               className="rounded-lg shadow-xl"
             />

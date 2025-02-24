@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiPhone, FiMail, FiMapPin, FiSend } from 'react-icons/fi';
 import { FaWhatsapp, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import contactBg from '../../../assets/images/welding.jpeg';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ const Contact = () => {
       <div 
         className="absolute inset-0 bg-fixed bg-cover bg-center z-0"
         style={{
-          backgroundImage: 'url("https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg")',
+          backgroundImage: `url(${contactBg})`,
           backgroundAttachment: 'fixed'
         }}
       >

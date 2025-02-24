@@ -1,27 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaSearchPlus, FaTools, FaCog } from 'react-icons/fa';
+import blackMan from '../../../assets/images/black-man.jpg';
+import cuttingMetal from '../../../assets/images/cutting-metal-with-plasma-equipment-plant.jpg';
+import portraitMan from '../../../assets/images/portrait-man.jpg';
 
 const Showcase = () => {
   const showcaseItems = [
     {
       title: "GingerSlice Pro - Standard",
       description: "Perfect for home kitchens and small restaurants",
-      image: "/src/assets/images/black-man.jpg",
+      image: blackMan,
       features: ["Compact Design", "Manual Operation", "2kg/hour capacity"],
       category: "Consumer"
     },
     {
       title: "GingerSlice Pro - Commercial",
       description: "Ideal for large-scale food processing",
-      image: "/src/assets/images/cutting-metal-with-plasma-equipment-plant.jpg",
+      image: cuttingMetal,
       features: ["Industrial Grade", "Semi-Automatic", "10kg/hour capacity"],
       category: "Industrial"
     },
     {
       title: "GingerSlice Pro - Premium",
       description: "Advanced features for professional kitchens",
-      image: "/src/assets/images/portrait-man.jpg",
+      image: portraitMan,
       features: ["Premium Finish", "Enhanced Safety", "5kg/hour capacity"],
       category: "Professional"
     }

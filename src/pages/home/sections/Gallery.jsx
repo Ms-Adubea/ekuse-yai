@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaSearch, FaExpand } from 'react-icons/fa';
+import blackMan from '../../../assets/images/black-man.jpg';
+import cuttingMetal from '../../../assets/images/cutting-metal-with-plasma-equipment-plant.jpg';
+import portraitMan from '../../../assets/images/portrait-man.jpg';
+import slider5 from '../../../assets/images/slider5.jpg';
+import ginEquipment from '../../../assets/images/gin-equipment.jpg';
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -18,35 +23,35 @@ const Gallery = () => {
       id: 1,
       name: "Cassava Grater",
       category: "agricultural",
-      image: "https://images.pexels.com/photos/2882603/pexels-photo-2882603.jpeg",
+      image: blackMan,
       description: "High-efficiency cassava processing equipment"
     },
     {
       id: 2,
       name: "Palm Kernel Cracker",
       category: "industrial",
-      image: "https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg",
+      image: cuttingMetal,
       description: "Industrial-grade palm kernel processing machine"
     },
     {
       id: 3,
       name: "Corn Mill",
       category: "agricultural",
-      image: "https://images.pexels.com/photos/4491881/pexels-photo-4491881.jpeg",
+      image: portraitMan,
       description: "Advanced corn milling solution"
     },
     {
       id: 4,
       name: "Metal Gates",
       category: "domestic",
-      image: "https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg",
+      image: slider5,
       description: "Custom-designed security gates"
     },
     {
       id: 5,
       name: "Industrial Mixer",
       category: "industrial",
-      image: "https://images.pexels.com/photos/175709/pexels-photo-175709.jpeg",
+      image: ginEquipment,
       description: "Large-scale mixing equipment"
     },
     {
