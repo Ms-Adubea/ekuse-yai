@@ -8,7 +8,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-whitesmoke text-[#CD7F32] p-4 shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white text-[#CD7F32] p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         
         {/* Left side - Links */}

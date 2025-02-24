@@ -31,7 +31,7 @@ const AboutProducts = () => {
   ];
 
   return (
-    <div id="products" className="py-16 bg-white">
+    <div id="product" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -51,7 +51,7 @@ const AboutProducts = () => {
           {/* Product Image */}
           <div className="relative">
             <img
-              src="/src/assets/images/slider5.jpg" // Make sure to add your product image
+              src="/src/assets/images/gin-equipment.jpg" // Make sure to add your product image
               alt="GingerSlice Pro"
               className="rounded-lg shadow-xl"
             />
