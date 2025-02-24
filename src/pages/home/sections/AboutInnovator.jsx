@@ -12,6 +12,7 @@ import {
   FaGithub,
   FaWhatsapp,
 } from "react-icons/fa";
+import davidInnovator from '../../../assets/images/img1.png';
 
 const AboutInnovator = () => {
   return (
@@ -34,7 +35,7 @@ const AboutInnovator = () => {
           <div className="relative pb-10 lg:col-span-1">
             <div className="w-full h-auto object-contain rounded-lg shadow-lg">
               <img
-                src="/src/assets/images/img1.png"
+                src={davidInnovator}
                 alt="Founder"
                 className="h-full w-full object-cover"
               />
