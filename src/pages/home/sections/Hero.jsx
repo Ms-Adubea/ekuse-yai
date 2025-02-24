@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
 
 const images = [
-  "/src/assets/images/black-man.jpg",
+  "/src/assets/images/welding.jpeg",
   "/src/assets/images/cutting-metal-with-plasma-equipment-plant.jpg",
   "/src/assets/images/black-man.jpg",
   "/src/assets/images/portrait-man.jpg",

@@ -18,38 +18,65 @@ const Gallery = () => {
       id: 1,
       name: "Cassava Grater",
       category: "agricultural",
-      image: "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg",
+      image: "https://images.pexels.com/photos/2882603/pexels-photo-2882603.jpeg",
       description: "High-efficiency cassava processing equipment"
     },
     {
       id: 2,
       name: "Palm Kernel Cracker",
       category: "industrial",
-      image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg",
+      image: "https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg",
       description: "Industrial-grade palm kernel processing machine"
     },
     {
       id: 3,
       name: "Corn Mill",
       category: "agricultural",
-      image: "/src/assets/images/portrait-man.jpg",
+      image: "https://images.pexels.com/photos/4491881/pexels-photo-4491881.jpeg",
       description: "Advanced corn milling solution"
     },
     {
       id: 4,
       name: "Metal Gates",
       category: "domestic",
-      image: "/src/assets/images/slider5.jpg",
+      image: "https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg",
       description: "Custom-designed security gates"
     },
     {
       id: 5,
       name: "Industrial Mixer",
       category: "industrial",
-      image: "/src/assets/images/gin-equipment.jpg",
+      image: "https://images.pexels.com/photos/175709/pexels-photo-175709.jpeg",
       description: "Large-scale mixing equipment"
     },
-    // Add more products as needed
+    {
+      id: 6,
+      name: "Agricultural Sprayer",
+      category: "agricultural",
+      image: "https://images.pexels.com/photos/2132171/pexels-photo-2132171.jpeg",
+      description: "Precision farming equipment"
+    },
+    {
+      id: 7,
+      name: "Security Doors",
+      category: "domestic",
+      image: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      description: "High-security metal doors"
+    },
+    {
+      id: 8,
+      name: "Industrial Conveyor",
+      category: "industrial",
+      image: "https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg",
+      description: "Automated material handling system"
+    },
+    {
+      id: 9,
+      name: "Metal Fencing",
+      category: "domestic",
+      image: "https://images.pexels.com/photos/1462012/pexels-photo-1462012.jpeg",
+      description: "Decorative and security fencing solutions"
+    }
   ];
 
   const filteredProducts = selectedCategory === 'all' 
