@@ -7,6 +7,10 @@ import logo from "../assets/images/ekusemlogo.png"; // Ensure your logo is in th
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white text-[#CD7F32] p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
@@ -14,12 +18,12 @@ const Navbar = () => {
         {/* Left side - Links */}
         <ul className="hidden md:flex space-x-6">
           <li>
-            <Link to="/" className="flex items-center hover:text-yellow-400">
+            <a href="#hero" className="flex items-center hover:text-yellow-400">
               <FaHome className="mr-2" /> Home
-            </Link>
+            </a>
           </li>
           <li>
-            <a href="#products" className="flex items-center hover:text-yellow-400">
+            <a href="#product" className="flex items-center hover:text-yellow-400">
               <FaTools className="mr-2" /> Product
             </a>
           </li>
@@ -32,7 +36,9 @@ const Navbar = () => {
 
         {/* Center - Logo */}
         <div className="flex-shrink-0">
-          <img src={logo} alt="Ekuse Metal Engineering" className="h-12 md:h-16 w-auto" />
+          <a href="#hero">
+            <img src={logo} alt="Ekuse Metal Engineering" className="h-12 md:h-16 w-auto" />
+          </a>
         </div>
 
         {/* Right side - Links */}
@@ -48,10 +54,10 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-              <a href="#gallery" className="flex items-center hover:text-yellow-400">
-                <GrGallery className="mr-2" /> Gallery
-              </a>
-            </li>
+            <a href="#gallery" className="flex items-center hover:text-yellow-400">
+              <GrGallery className="mr-2" /> Gallery
+            </a>
+          </li>
           <li>
             <a href="#contact" className="flex items-center hover:text-yellow-400">
               <FaEnvelope className="mr-2" /> Contact
@@ -73,37 +79,58 @@ const Navbar = () => {
         <div className="md:hidden bg-[#3B2F2F] text-white p-4 mt-2 rounded shadow-lg">
           <ul className="flex flex-col space-y-4">
             <li>
-              <Link to="/" className="flex items-center hover:text-yellow-400">
+              <a href="#hero" 
+                onClick={handleClick}
+                className="flex items-center hover:text-yellow-400"
+              >
                 <FaHome className="mr-2" /> Home
-              </Link>
+              </a>
             </li>
             <li>
-              <a href="#products" className="flex items-center hover:text-yellow-400">
+              <a href="#product" 
+                onClick={handleClick}
+                className="flex items-center hover:text-yellow-400"
+              >
                 <FaTools className="mr-2" /> Product
               </a>
             </li>
             <li>
-              <a href="#innovator" className="flex items-center hover:text-yellow-400">
+              <a href="#innovator" 
+                onClick={handleClick}
+                className="flex items-center hover:text-yellow-400"
+              >
                 <FaUser className="mr-2" /> Innovator
               </a>
             </li>
             <li>
-              <a href="#showcase" className="flex items-center hover:text-yellow-400">
+              <a href="#showcase" 
+                onClick={handleClick}
+                className="flex items-center hover:text-yellow-400"
+              >
                 <FaTools className="mr-2" /> Showcase
               </a>
             </li>
             <li>
-              <a href="#testimonials" className="flex items-center hover:text-yellow-400">
+              <a href="#testimonials" 
+                onClick={handleClick}
+                className="flex items-center hover:text-yellow-400"
+              >
                 <FaStar className="mr-2" /> Testimonials
               </a>
             </li>
             <li>
-              <a href="#gallery" className="flex items-center hover:text-yellow-400">
+              <a href="#gallery" 
+                onClick={handleClick}
+                className="flex items-center hover:text-yellow-400"
+              >
                 <GrGallery className="mr-2" /> Gallery
               </a>
             </li>
             <li>
-              <a href="#contact" className="flex items-center hover:text-yellow-400">
+              <a href="#contact" 
+                onClick={handleClick}
+                className="flex items-center hover:text-yellow-400"
+              >
                 <FaEnvelope className="mr-2" /> Contact
               </a>
             </li>

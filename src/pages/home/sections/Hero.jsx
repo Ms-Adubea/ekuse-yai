@@ -26,7 +26,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative bg-orange-900 h-screen flex items-center">
+    <div id="hero" className="relative bg-orange-900 h-screen flex items-center">
       {/* Background Slideshow */}
       <div className="absolute inset-0 transition-opacity duration-1000 ease-in-out">
         <img

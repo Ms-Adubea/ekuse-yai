@@ -44,7 +44,7 @@ const AboutInnovator = () => {
           <div className="mt-10 sm:mt-0 lg:col-span-2">
             <h3 className="text-2xl font-bold text-gray-900">Mr. David Sam</h3>
             <p className="mt-3 text-lg text-gray-500">
-              A visionary young innovator from Sankor, Central Region, David Sam
+              A visionary young innovator from Winneba, Central Region, David Sam
               is passionate about creating efficient solutions for everyday
               challenges. Through the Young Africa Innovates (YAI) program, he
               has developed groundbreaking innovations that address real-world

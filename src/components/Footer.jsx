@@ -9,22 +9,22 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-sm font-semibold text-[#FFF3E0] tracking-wider uppercase">GingerSlice Pro</h3>
+            <h3 className="text-sm font-semibold text-[#FFF3E0] tracking-wider uppercase">Ekuse Metal Engineering</h3>
             <p className="mt-4 text-base text-white">
               Revolutionizing kitchen efficiency with innovative ginger slicing solutions. 
               Made in Ghana, designed for the world.
             </p>
             <div className="mt-4 flex space-x-6">
-              <a href="#" className="text-[#FFF3E0] hover:text-white">
+              <a href="#" className="text-[#FFF3E0] hover:text-yellow-400">
                 <FaFacebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-[#FFF3E0] hover:text-white">
+              <a href="#" className="text-[#FFF3E0] hover:text-yellow-400">
                 <FaTwitter className="h-6 w-6" />
               </a>
-              <a href="https://wa.me/+233547850760" className="text-[#FFF3E0] hover:text-white">
+              <a href="https://wa.me/+233547850760" className="text-[#FFF3E0] hover:text-yellow-400">
                 <FaWhatsapp className="h-6 w-6" />
               </a>
-              <a href="#" className="text-[#FFF3E0] hover:text-white">
+              <a href="#" className="text-[#FFF3E0] hover:text-yellow-400">
                 <FaInstagram className="h-6 w-6" />
               </a>
             </div>
@@ -53,10 +53,10 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold text-[#FFF3E0] tracking-wider uppercase">Quick Links</h3>
             <div className="mt-4 space-y-4">
-              <a href="#product" className="block text-base text-white hover:text-[#FFF3E0]">Products</a>
-              <a href="#innovator" className="block text-base text-white hover:text-[#FFF3E0]">About Innovator</a>
-              <a href="#showcase" className="block text-base text-white hover:text-[#FFF3E0]">Showcase</a>
-              <a href="#contact" className="block text-base text-white hover:text-[#FFF3E0]">Contact</a>
+              <a href="#product" className="block text-base text-white hover:text-yellow-400">Products</a>
+              <a href="#innovator" className="block text-base text-white hover:text-yellow-400">About Innovator</a>
+              <a href="#showcase" className="block text-base text-white hover:text-yellow-400">Showcase</a>
+              <a href="#contact" className="block text-base text-white hover:text-yellow-400">Contact</a>
             </div>
           </div>
         </div>
