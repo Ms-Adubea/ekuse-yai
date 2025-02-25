@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FiPhone, FiMail, FiMapPin, FiSend } from 'react-icons/fi';
 import { FaWhatsapp, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import contactBg from '../../../assets/images/welding.jpeg';
+import AnimatedSection from '../../../components/AnimatedSection';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,36 +27,35 @@ const Contact = () => {
 
   return (
     <div id="contact" className="relative">
-      {/* Fixed Background Image */}
-      <div 
-        className="absolute inset-0 bg-fixed bg-cover bg-center z-0"
+      {/* Background Image */}
+      <div className="absolute inset-0 bg-fixed bg-cover bg-center z-0"
         style={{
           backgroundImage: `url(${contactBg})`,
           backgroundAttachment: 'fixed'
-        }}
-      >
+        }}>
         <div className="absolute inset-0 bg-opacity-75"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
-              Get In Touch
-            </h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
-              Contact Us
-            </p>
-            <p className="mt-4 max-w-2xl text-xl text-gray-300 mx-auto">
-              Have questions? We're here to help and provide the support you need.
-            </p>
-          </div>
+          <AnimatedSection>
+            {/* Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
+                Get In Touch
+              </h2>
+              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                Contact Us
+              </p>
+              <p className="mt-4 max-w-2xl text-xl text-gray-300 mx-auto">
+                Have questions? We're here to help and provide the support you need.
+              </p>
+            </div>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className="bg-inherit bg-opacity-10 backdrop-blur-lg p-8 rounded-xl">
+            <AnimatedSection className="bg-inherit bg-opacity-10 backdrop-blur-lg p-8 rounded-xl">
+              {/* Contact Information */}
               <h3 className="text-2xl font-bold text-white mb-8">
                 Contact Information
               </h3>
@@ -137,10 +137,10 @@ const Contact = () => {
                   className="rounded-xl"
                 ></iframe>
               </div>
-            </div>
+            </AnimatedSection>
 
-            {/* Contact Form */}
-            <div className="bg-transparent bg-opacity-10 backdrop-blur-lg p-8 rounded-xl">
+            <AnimatedSection className="bg-transparent bg-opacity-10 backdrop-blur-lg p-8 rounded-xl">
+              {/* Contact Form */}
               <h3 className="text-2xl font-bold text-white mb-8">
                 Send Us a Message
               </h3>
@@ -212,7 +212,7 @@ const Contact = () => {
                   Send Message
                 </button>
               </form>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </div>

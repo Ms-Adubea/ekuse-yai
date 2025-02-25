@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes, FaHome, FaTools, FaUser, FaStar, FaEnvelope } from "react-icons/fa";
+import { FaBars, FaTimes, FaHome, FaTools, FaUser, FaStar, FaEnvelope, FaBuilding } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
-import logo from "../assets/images/ekusemlogo.png"; // Ensure your logo is in this path
+import logo from "../assets/images/newemelogo.png"; // Ensure your logo is in this path
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,8 +23,8 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#product" className="flex items-center hover:text-yellow-400">
-              <FaTools className="mr-2" /> Product
+            <a href="#about" className="flex items-center hover:text-yellow-400">
+              <FaBuilding className="mr-2" /> About Us
             </a>
           </li>
           <li>
@@ -32,6 +32,12 @@ const Navbar = () => {
               <FaUser className="mr-2" /> Innovator
             </a>
           </li>
+          <li>
+            <a href="#product" className="flex items-center hover:text-yellow-400">
+              <FaTools className="mr-2" /> Product
+            </a>
+          </li>
+          
         </ul>
 
         {/* Center - Logo */}
@@ -87,11 +93,11 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#product" 
+              <a href="#about" 
                 onClick={handleClick}
                 className="flex items-center hover:text-yellow-400"
               >
-                <FaTools className="mr-2" /> Product
+                <FaBuilding className="mr-2" /> About Us
               </a>
             </li>
             <li>
@@ -100,6 +106,14 @@ const Navbar = () => {
                 className="flex items-center hover:text-yellow-400"
               >
                 <FaUser className="mr-2" /> Innovator
+              </a>
+            </li>
+            <li>
+              <a href="#product" 
+                onClick={handleClick}
+                className="flex items-center hover:text-yellow-400"
+              >
+                <FaTools className="mr-2" /> Product
               </a>
             </li>
             <li>

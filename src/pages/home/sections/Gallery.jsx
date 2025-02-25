@@ -6,6 +6,7 @@ import cuttingMetal from '../../../assets/images/cutting-metal-with-plasma-equip
 import portraitMan from '../../../assets/images/portrait-man.jpg';
 import slider5 from '../../../assets/images/slider5.jpg';
 import ginEquipment from '../../../assets/images/gin-equipment.jpg';
+import AnimatedSection from '../../../components/AnimatedSection';
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -88,52 +89,77 @@ const Gallery = () => {
     ? products 
     : products.filter(product => product.category === selectedCategory);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
     <div id="gallery" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
-            Our Portfolio
-          </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Product Gallery
-          </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-            Explore our diverse range of metal engineering solutions
-          </p>
-        </div>
+        <AnimatedSection>
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
+              Our Portfolio
+            </h2>
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              Product Gallery
+            </p>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+              Explore our diverse range of metal engineering solutions
+            </p>
+          </div>
+        </AnimatedSection>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map(category => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-2 rounded-full transition-colors duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-[#CD7F32] text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
+        <AnimatedSection>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map(category => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-2 rounded-full transition-colors duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-[#CD7F32] text-white'
+                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </AnimatedSection>
 
         {/* Gallery Grid */}
-        <motion.div 
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <AnimatePresence>
+        <AnimatedSection>
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {filteredProducts.map(product => (
               <motion.div
                 key={product.id}
-                layout
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                variants={itemVariants}
                 className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="relative group">
@@ -162,8 +188,8 @@ const Gallery = () => {
                 </div>
               </motion.div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </motion.div>
+        </AnimatedSection>
 
         {/* Image Modal */}
         {selectedImage && (

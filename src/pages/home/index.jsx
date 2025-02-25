@@ -1,8 +1,8 @@
 import React from 'react'
 import Hero from './sections/Hero';
-import AboutProducts from './sections/AboutProducts';
+import AboutUs from './sections/AboutUs';
 import AboutInnovator from './sections/AboutInnovator';
-import Showcase from './sections/Showcase';
+import AboutProducts from './sections/AboutProducts';
 import Testimonials from './sections/Testimonials';
 import Gallery from './sections/Gallery';
 import Contact from './sections/Contact';
@@ -11,9 +11,9 @@ const Home = () => {
   return (
     <div>
         <Hero />
-        <AboutProducts />
+        <AboutUs />
         <AboutInnovator />
-        <Showcase />
+        <AboutProducts />
         <Testimonials />
         <Gallery />
         <Contact />

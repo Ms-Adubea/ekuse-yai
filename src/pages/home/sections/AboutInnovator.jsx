@@ -12,7 +12,8 @@ import {
   FaGithub,
   FaWhatsapp,
 } from "react-icons/fa";
-import davidInnovator from '../../../assets/images/img1.png';
+import davidInnovator from '../../../assets/images/innovator.jpg';
+import AnimatedSection from '../../../components/AnimatedSection';
 
 const AboutInnovator = () => {
   return (
@@ -23,16 +24,18 @@ const AboutInnovator = () => {
 
     <div id="innovator" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
-          <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
-            Our Story
-          </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Meet Our Founder
-          </p>
-        </div>
+        <AnimatedSection>
+          <div className="lg:text-center">
+            <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
+              Our Story
+            </h2>
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              Meet Our Founder
+            </p>
+          </div>
+        </AnimatedSection>
         <div className="mt-16 lg:mt-24 lg:grid lg:grid-cols-3 lg:gap-16">
-          <div className="relative pb-10 lg:col-span-1">
+          <AnimatedSection className="relative pb-10 lg:col-span-1">
             <div className="w-full h-auto object-contain rounded-lg shadow-lg">
               <img
                 src={davidInnovator}
@@ -40,8 +43,8 @@ const AboutInnovator = () => {
                 className="h-full w-full object-cover"
               />
             </div>
-          </div>
-          <div className="mt-10 sm:mt-0 lg:col-span-2">
+          </AnimatedSection>
+          <AnimatedSection className="mt-10 sm:mt-0 lg:col-span-2">
             <h3 className="text-2xl font-bold text-gray-900">Mr. David Sam</h3>
             <p className="mt-3 text-lg text-gray-500">
               A visionary young innovator from Winneba, Central Region, David Sam
@@ -58,20 +61,20 @@ const AboutInnovator = () => {
             innovation, bringing fresh perspectives to the metal engineering industry.
             </p>
             <div className="mt-6 flex space-x-4">
-              <a href="#" className="text-[#CD7F32] hover:text-orange-700">
+              <a href=" https://x.com/DavidSam232743?t=0ep7eVDcmNgi7V47wxX06g&s=08" className="text-[#CD7F32] hover:text-orange-700">
                 <FaTwitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-[#CD7F32] hover:text-orange-700">
+              <a href="#https://www.facebook.com/share/1AyriFF8qA/" className="text-[#CD7F32] hover:text-orange-700">
                 <FaFacebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-[#CD7F32] hover:text-orange-700">
+              <a href="https://www.instagram.com/davidsam8882?igsh=NGYxenZsMmhvb2hp" className="text-[#CD7F32] hover:text-orange-700">
                 <FaInstagram className="h-5 w-5" />
               </a>
               <a href="https://wa.me/+233547850760" className="text-[#CD7F32] hover:text-orange-700">
                 <FaWhatsapp className="h-5 w-5" />
               </a>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </div>

@@ -15,16 +15,16 @@ const Footer = () => {
               Made in Ghana, designed for the world.
             </p>
             <div className="mt-4 flex space-x-6">
-              <a href="#" className="text-[#FFF3E0] hover:text-yellow-400">
+              <a href="https://www.facebook.com/share/1AyriFF8qA/" className="text-[#FFF3E0] hover:text-yellow-400">
                 <FaFacebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-[#FFF3E0] hover:text-yellow-400">
+              <a href="https://x.com/DavidSam232743?t=0ep7eVDcmNgi7V47wxX06g&s=08" className="text-[#FFF3E0] hover:text-yellow-400">
                 <FaTwitter className="h-6 w-6" />
               </a>
               <a href="https://wa.me/+233547850760" className="text-[#FFF3E0] hover:text-yellow-400">
                 <FaWhatsapp className="h-6 w-6" />
               </a>
-              <a href="#" className="text-[#FFF3E0] hover:text-yellow-400">
+              <a href="https://www.instagram.com/davidsam8882?igsh=NGYxenZsMmhvb2hp" className="text-[#FFF3E0] hover:text-yellow-400">
                 <FaInstagram className="h-6 w-6" />
               </a>
             </div>
