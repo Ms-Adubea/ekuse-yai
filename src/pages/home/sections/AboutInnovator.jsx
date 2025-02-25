@@ -12,7 +12,7 @@ import {
   FaGithub,
   FaWhatsapp,
 } from "react-icons/fa";
-import davidInnovator from '../../../assets/images/innovator.jpg';
+import davidInnovator from '../../../assets/images/innovator-removebg.png';
 import AnimatedSection from '../../../components/AnimatedSection';
 
 const AboutInnovator = () => {

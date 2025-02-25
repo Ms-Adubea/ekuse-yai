@@ -18,7 +18,7 @@ const Navbar = () => {
         {/* Left side - Links */}
         <ul className="hidden md:flex space-x-6">
           <li>
-            <a href="#hero" className="hover:text-yellow-400">
+            <a href="#" className="hover:text-yellow-400">
               Home
             </a>
           </li>
@@ -79,7 +79,7 @@ const Navbar = () => {
         <div className="md:hidden bg-[#CD7F32] text-white p-4 mt-2 rounded shadow-lg">
           <ul className="flex flex-col items-center space-y-4">
             <li>
-              <a href="#hero" 
+              <a href="#" 
                 onClick={handleClick}
                 className="flex items-center hover:text-yellow-400"
               >

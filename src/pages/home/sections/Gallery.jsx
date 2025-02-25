@@ -1,6 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaArrowLeft, FaArrowRight, FaExpand, FaTimes } from 'react-icons/fa'; // Added FaTimes for the close button
+import { motion } from 'framer-motion';
+import { FaArrowLeft, FaArrowRight, FaExpand, FaTimes } from 'react-icons/fa';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import blackMan from '../../../assets/images/black-man.jpg';
 import cuttingMetal from '../../../assets/images/cutting-metal-with-plasma-equipment-plant.jpg';
 import portraitMan from '../../../assets/images/portrait-man.jpg';
@@ -11,101 +14,113 @@ import AnimatedSection from '../../../components/AnimatedSection';
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const carouselRef = useRef(null);
+  const sliderRef = useRef(null);
 
   const categories = [
     { id: 'all', name: 'All Products' },
     { id: 'agricultural', name: 'Agricultural' },
     { id: 'industrial', name: 'Industrial' },
-    { id: 'domestic', name: 'Domestic' }
+    { id: 'domestic', name: 'Domestic' },
   ];
 
   const products = [
     {
       id: 1,
-      name: "Cassava Grater",
-      category: "agricultural",
+      name: 'Cassava Grater',
+      category: 'agricultural',
       image: blackMan,
-      description: "High-efficiency cassava processing equipment"
+      description: 'High-efficiency cassava processing equipment',
     },
     {
       id: 2,
-      name: "Palm Kernel Cracker",
-      category: "industrial",
+      name: 'Palm Kernel Cracker',
+      category: 'industrial',
       image: cuttingMetal,
-      description: "Industrial-grade palm kernel processing machine"
+      description: 'Industrial-grade palm kernel processing machine',
     },
     {
       id: 3,
-      name: "Corn Mill",
-      category: "agricultural",
+      name: 'Corn Mill',
+      category: 'agricultural',
       image: portraitMan,
-      description: "Advanced corn milling solution"
+      description: 'Advanced corn milling solution',
     },
     {
       id: 4,
-      name: "Metal Gates",
-      category: "domestic",
+      name: 'Metal Gates',
+      category: 'domestic',
       image: slider5,
-      description: "Custom-designed security gates"
+      description: 'Custom-designed security gates',
     },
     {
       id: 5,
-      name: "Industrial Mixer",
-      category: "industrial",
+      name: 'Industrial Mixer',
+      category: 'industrial',
       image: ginEquipment,
-      description: "Large-scale mixing equipment"
+      description: 'Large-scale mixing equipment',
     },
     {
       id: 6,
-      name: "Agricultural Sprayer",
-      category: "agricultural",
-      image: "https://images.pexels.com/photos/2132171/pexels-photo-2132171.jpeg",
-      description: "Precision farming equipment"
+      name: 'Agricultural Sprayer',
+      category: 'agricultural',
+      image: 'https://images.pexels.com/photos/2132171/pexels-photo-2132171.jpeg',
+      description: 'Precision farming equipment',
     },
     {
       id: 7,
-      name: "Security Doors",
-      category: "domestic",
-      image: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
-      description: "High-security metal doors"
+      name: 'Security Doors',
+      category: 'domestic',
+      image: 'https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg',
+      description: 'High-security metal doors',
     },
     {
       id: 8,
-      name: "Industrial Conveyor",
-      category: "industrial",
-      image: "https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg",
-      description: "Automated material handling system"
+      name: 'Industrial Conveyor',
+      category: 'industrial',
+      image: 'https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg',
+      description: 'Automated material handling system',
     },
     {
       id: 9,
-      name: "Metal Fencing",
-      category: "domestic",
-      image: "https://images.pexels.com/photos/1462012/pexels-photo-1462012.jpeg",
-      description: "Decorative and security fencing solutions"
-    }
+      name: 'Metal Fencing',
+      category: 'domestic',
+      image: 'https://images.pexels.com/photos/1462012/pexels-photo-1462012.jpeg',
+      description: 'Decorative and security fencing solutions',
+    },
   ];
 
-  const filteredProducts = selectedCategory === 'all' 
-    ? products 
-    : products.filter(product => product.category === selectedCategory);
+  const filteredProducts =
+    selectedCategory === 'all'
+      ? products
+      : products.filter((product) => product.category === selectedCategory);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === filteredProducts.length - 5 ? 0 : prevIndex + 1
-    );
+  // Slider settings
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? filteredProducts.length - 5 : prevIndex - 1
-    );
-  };
-
-  const visibleProducts = filteredProducts.length <= 5 
-    ? filteredProducts 
-    : [...filteredProducts.slice(currentIndex), ...filteredProducts.slice(0, currentIndex)].slice(0, 5);
 
   return (
     <div id="gallery" className="py-16 bg-gray-50">
@@ -128,13 +143,10 @@ const Gallery = () => {
         {/* Category Filter */}
         <AnimatedSection>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map(category => (
+            {categories.map((category) => (
               <button
                 key={category.id}
-                onClick={() => {
-                  setSelectedCategory(category.id);
-                  setCurrentIndex(0);
-                }}
+                onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-2 rounded-full transition-colors duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-[#CD7F32] text-white'
@@ -151,16 +163,16 @@ const Gallery = () => {
         <AnimatedSection>
           <div className="relative">
             {/* Carousel Navigation */}
-            {filteredProducts.length > 5 && (
+            {filteredProducts.length > 3 && (
               <div className="absolute top-1/2 w-full flex justify-between -mt-8 z-10 px-2">
-                <button 
-                  onClick={prevSlide}
+                <button
+                  onClick={() => sliderRef.current.slickPrev()}
                   className="bg-white p-3 rounded-full shadow-md hover:bg-[#CD7F32] hover:text-white transition-colors duration-300"
                 >
                   <FaArrowLeft />
                 </button>
-                <button 
-                  onClick={nextSlide}
+                <button
+                  onClick={() => sliderRef.current.slickNext()}
                   className="bg-white p-3 rounded-full shadow-md hover:bg-[#CD7F32] hover:text-white transition-colors duration-300"
                 >
                   <FaArrowRight />
@@ -169,18 +181,14 @@ const Gallery = () => {
             )}
 
             {/* Carousel Container */}
-            <div 
-              ref={carouselRef}
-              className="overflow-hidden py-8"
-            >
-              <div className="flex space-x-6">
-                {visibleProducts.map((product, index) => (
+            <Slider ref={sliderRef} {...sliderSettings}>
+              {filteredProducts.map((product) => (
+                <div key={product.id} className="px-4">
                   <motion.div
-                    key={product.id}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3 }}
-                    className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex-none w-64"
+                    className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                   >
                     <div className="relative group">
                       <img
@@ -198,42 +206,29 @@ const Gallery = () => {
                       </div>
                     </div>
                     <div className="p-4">
-                      <h3 className="text-lg font-bold text-gray-900 mb-1 truncate">{product.name}</h3>
+                      <h3 className="text-lg font-bold text-gray-900 mb-1 truncate">
+                        {product.name}
+                      </h3>
                       <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-[#CD7F32]">
-                        {categories.find(cat => cat.id === product.category).name}
+                        {categories.find((cat) => cat.id === product.category).name}
                       </span>
                     </div>
                   </motion.div>
-                ))}
-              </div>
-            </div>
+                </div>
+              ))}
+            </Slider>
           </div>
         </AnimatedSection>
 
-        {/* Carousel indicators */}
-        {filteredProducts.length > 5 && (
-          <div className="flex justify-center mt-6 space-x-2">
-            {Array.from({ length: Math.min(filteredProducts.length, 5) }).map((_, index) => (
-              <button
-                key={index}
-                className={`h-2 w-2 rounded-full ${
-                  currentIndex === index ? 'bg-[#CD7F32]' : 'bg-gray-300'
-                }`}
-                onClick={() => setCurrentIndex(index)}
-              />
-            ))}
-          </div>
-        )}
-
         {/* Image Modal */}
         {selectedImage && (
-          <div 
+          <div
             className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
-            <div 
+            <div
               className="max-w-4xl w-full max-h-[90vh] bg-white rounded-lg overflow-hidden flex flex-col"
-              onClick={e => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
               <button
@@ -257,7 +252,7 @@ const Gallery = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{selectedImage.name}</h3>
                 <div className="mb-3">
                   <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-[#CD7F32]">
-                    {categories.find(cat => cat.id === selectedImage.category).name}
+                    {categories.find((cat) => cat.id === selectedImage.category).name}
                   </span>
                 </div>
                 <p className="text-gray-600">{selectedImage.description}</p>
