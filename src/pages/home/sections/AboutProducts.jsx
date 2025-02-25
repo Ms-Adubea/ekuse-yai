@@ -57,7 +57,7 @@ const AboutProducts = () => {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
-              Innovation
+              Our Recent Innovation
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               GingerSlice Pro - Commercial
@@ -118,10 +118,10 @@ const AboutProducts = () => {
               </div>
 
               {/* Action Button */}
-              <button className="mt-8 w-full bg-[#CD7F32] text-white py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors duration-300 flex items-center justify-center text-lg">
+              {/* <button className="mt-8 w-full bg-[#CD7F32] text-white py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors duration-300 flex items-center justify-center text-lg">
                 <FaSearchPlus className="mr-2" />
                 Request Quote
-              </button>
+              </button> */}
             </div>
           </AnimatedSection>
         </div>

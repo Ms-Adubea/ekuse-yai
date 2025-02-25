@@ -45,7 +45,7 @@ const Hero = () => {
           Delivering innovative, high-quality metal engineering solutions that exceed customer expectations, while maintaining a commitment to safety, sustainability, and excellence in everything we do.
         </p>
         <a
-          href="#products"
+          href="#gallery"
           className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#CD7F32] hover:bg-orange-700"
         >
           Explore Our Products

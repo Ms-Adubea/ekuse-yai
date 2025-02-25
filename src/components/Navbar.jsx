@@ -18,26 +18,20 @@ const Navbar = () => {
         {/* Left side - Links */}
         <ul className="hidden md:flex space-x-6">
           <li>
-            <a href="#hero" className="flex items-center hover:text-yellow-400">
-              <FaHome className="mr-2" /> Home
+            <a href="#hero" className="hover:text-yellow-400">
+              Home
             </a>
           </li>
           <li>
-            <a href="#about" className="flex items-center hover:text-yellow-400">
-              <FaBuilding className="mr-2" /> About Us
+            <a href="#about" className="hover:text-yellow-400">
+              About Us
             </a>
           </li>
           <li>
-            <a href="#innovator" className="flex items-center hover:text-yellow-400">
-              <FaUser className="mr-2" /> Innovator
+            <a href="#innovator" className="hover:text-yellow-400">
+              Innovator
             </a>
           </li>
-          <li>
-            <a href="#product" className="flex items-center hover:text-yellow-400">
-              <FaTools className="mr-2" /> Product
-            </a>
-          </li>
-          
         </ul>
 
         {/* Center - Logo */}
@@ -49,24 +43,24 @@ const Navbar = () => {
 
         {/* Right side - Links */}
         <ul className="hidden md:flex space-x-6">
-          <li>
-            <a href="#showcase" className="flex items-center hover:text-yellow-400">
-              <FaTools className="mr-2" /> Showcase
+        <li>
+            <a href="#product" className="hover:text-yellow-400">
+              Product
             </a>
           </li>
           <li>
-            <a href="#testimonials" className="flex items-center hover:text-yellow-400">
-              <FaStar className="mr-2" /> Testimonials
+            <a href="#testimonials" className="hover:text-yellow-400">
+              Testimonials
             </a>
           </li>
           <li>
-            <a href="#gallery" className="flex items-center hover:text-yellow-400">
-              <GrGallery className="mr-2" /> Gallery
+            <a href="#gallery" className="hover:text-yellow-400">
+              Gallery
             </a>
           </li>
           <li>
-            <a href="#contact" className="flex items-center hover:text-yellow-400">
-              <FaEnvelope className="mr-2" /> Contact
+            <a href="#contact" className="hover:text-yellow-400">
+              Contact
             </a>
           </li>
         </ul>
@@ -82,8 +76,8 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-[#3B2F2F] text-white p-4 mt-2 rounded shadow-lg">
-          <ul className="flex flex-col space-y-4">
+        <div className="md:hidden bg-[#CD7F32] text-white p-4 mt-2 rounded shadow-lg">
+          <ul className="flex flex-col items-center space-y-4">
             <li>
               <a href="#hero" 
                 onClick={handleClick}
@@ -114,14 +108,6 @@ const Navbar = () => {
                 className="flex items-center hover:text-yellow-400"
               >
                 <FaTools className="mr-2" /> Product
-              </a>
-            </li>
-            <li>
-              <a href="#showcase" 
-                onClick={handleClick}
-                className="flex items-center hover:text-yellow-400"
-              >
-                <FaTools className="mr-2" /> Showcase
               </a>
             </li>
             <li>

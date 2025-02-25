@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-sm font-semibold text-[#FFF3E0] tracking-wider uppercase">Ekuse Metal Engineering</h3>
             <p className="mt-4 text-base text-white">
-              Revolutionizing kitchen efficiency with innovative ginger slicing solutions. 
+              Revolutionizing efficiency with innovative metal engineering solutions. 
               Made in Ghana, designed for the world.
             </p>
             <div className="mt-4 flex space-x-6">
@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="mt-4 space-y-4">
               <a href="#product" className="block text-base text-white hover:text-yellow-400">Products</a>
               <a href="#innovator" className="block text-base text-white hover:text-yellow-400">About Innovator</a>
-              <a href="#showcase" className="block text-base text-white hover:text-yellow-400">Showcase</a>
+              <a href="#gallery" className="block text-base text-white hover:text-yellow-400">Gallery</a>
               <a href="#contact" className="block text-base text-white hover:text-yellow-400">Contact</a>
             </div>
           </div>
@@ -63,7 +63,7 @@ const Footer = () => {
         
         <div className="mt-8 border-t border-[#FFF3E0] pt-8">
           <p className="text-base text-[#FFF3E0] text-center">
-            © 2025 GingerSlice Pro. All rights reserved.
+            © 2025 Ekuse Metal Engineering. All rights reserved.
           </p>
         </div>
       </div>
