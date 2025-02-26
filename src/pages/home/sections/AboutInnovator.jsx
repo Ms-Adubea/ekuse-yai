@@ -61,16 +61,16 @@ const AboutInnovator = () => {
             innovation, bringing fresh perspectives to the metal engineering industry.
             </p>
             <div className="mt-6 flex space-x-4">
-              <a href=" https://x.com/DavidSam232743?t=0ep7eVDcmNgi7V47wxX06g&s=08" className="text-[#CD7F32] hover:text-orange-700">
+              <a href=" https://x.com/DavidSam232743?t=0ep7eVDcmNgi7V47wxX06g&s=08" target="_blank" className="text-[#CD7F32] hover:text-orange-700">
                 <FaTwitter className="h-5 w-5" />
               </a>
-              <a href="#https://www.facebook.com/share/1AyriFF8qA/" className="text-[#CD7F32] hover:text-orange-700">
+              <a href="#https://www.facebook.com/share/1AyriFF8qA/" target="_blank" className="text-[#CD7F32] hover:text-orange-700">
                 <FaFacebook className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/davidsam8882?igsh=NGYxenZsMmhvb2hp" className="text-[#CD7F32] hover:text-orange-700">
+              <a href="https://www.instagram.com/davidsam8882?igsh=NGYxenZsMmhvb2hp" target="_blank" className="text-[#CD7F32] hover:text-orange-700">
                 <FaInstagram className="h-5 w-5" />
               </a>
-              <a href="https://wa.me/+233547850760" className="text-[#CD7F32] hover:text-orange-700">
+              <a href="https://wa.me/+233547850760" target="_blank" className="text-[#CD7F32] hover:text-orange-700">
                 <FaWhatsapp className="h-5 w-5" />
               </a>
             </div>

@@ -109,13 +109,13 @@ const Contact = () => {
               <div className="mt-8">
                 <p className="text-lg font-medium text-white mb-4">Follow Us</p>
                 <div className="flex space-x-4">
-                  <a href="https://www.facebook.com/share/1AyriFF8qA/" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <a href="https://www.facebook.com/share/1AyriFF8qA/" target="_blank" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
                     <FaFacebook className="h-5 w-5" />
                   </a>
-                  <a href="https://x.com/DavidSam232743?t=0ep7eVDcmNgi7V47wxX06g&s=08" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <a href="https://x.com/DavidSam232743?t=0ep7eVDcmNgi7V47wxX06g&s=08" target="_blank" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
                     <FaTwitter className="h-5 w-5" />
                   </a>
-                  <a href="https://www.instagram.com/davidsam8882?igsh=NGYxenZsMmhvb2hp" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <a href="https://www.instagram.com/davidsam8882?igsh=NGYxenZsMmhvb2hp" target="_blank" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
                     <FaInstagram className="h-5 w-5" />
                   </a>
                 </div>
