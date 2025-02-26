@@ -35,12 +35,16 @@ const Footer = () => {
             <div className="mt-4 space-y-4">
               <div className="flex items-center">
                 <FiPhone className="h-5 w-5 text-[#FFF3E0] mr-2" />
-                <span className="text-white">+233 54 783 0760</span>
+                <a href="tel:+233547850760">
+                <span className="text-white hover:text-yellow-400">+233 54 783 0760</span>
+                </a>
               </div> 
 
               <div className="flex items-center">
                 <FiMail className="h-5 w-5 text-[#FFF3E0] mr-2" />
-                <span className="text-white">davidksam32@gmail.com</span>
+                <a href="mailto:davidksam32@gmail.com">
+                <span className="text-white hover:text-yellow-400">davidksam32@gmail.com</span>
+                </a>
               </div>
 
               <div className="flex items-center">

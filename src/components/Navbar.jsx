@@ -36,7 +36,7 @@ const Navbar = () => {
 
         {/* Center - Logo */}
         <div className="flex-shrink-0">
-          <a href="#hero">
+          <a href="#">
             <img src={logo} alt="Ekuse Metal Engineering" className="h-12 md:h-16 w-auto" />
           </a>
         </div>

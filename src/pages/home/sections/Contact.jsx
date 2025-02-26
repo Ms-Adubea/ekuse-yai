@@ -109,16 +109,13 @@ const Contact = () => {
               <div className="mt-8">
                 <p className="text-lg font-medium text-white mb-4">Follow Us</p>
                 <div className="flex space-x-4">
-                  <a href="#" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <a href="https://www.facebook.com/share/1AyriFF8qA/" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
                     <FaFacebook className="h-5 w-5" />
                   </a>
-                  <a href="#" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <a href="https://x.com/DavidSam232743?t=0ep7eVDcmNgi7V47wxX06g&s=08" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
                     <FaTwitter className="h-5 w-5" />
                   </a>
-                  <a href="https://wa.me/+233547850760" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
-                    <FaWhatsapp className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <a href="https://www.instagram.com/davidsam8882?igsh=NGYxenZsMmhvb2hp" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
                     <FaInstagram className="h-5 w-5" />
                   </a>
                 </div>
@@ -150,6 +147,7 @@ const Contact = () => {
                     Full Name
                   </label>
                   <input
+                  placeholder="Type your full name"
                     type="text"
                     name="name"
                     id="name"
@@ -165,6 +163,7 @@ const Contact = () => {
                     Email Address
                   </label>
                   <input
+                  placeholder="Type your email address"
                     type="email"
                     name="email"
                     id="email"
@@ -180,6 +179,7 @@ const Contact = () => {
                     Phone Number
                   </label>
                   <input
+                  placeholder="Type your phone number"
                     type="tel"
                     name="phone"
                     id="phone"
@@ -194,6 +194,7 @@ const Contact = () => {
                     Message
                   </label>
                   <textarea
+                  placeholder="Type your message here..."
                     name="message"
                     id="message"
                     rows={4}
