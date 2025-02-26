@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FiPhone, FiMail, FiMapPin, FiSend } from 'react-icons/fi';
 import { FaWhatsapp, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
-import contactBg from '../../../assets/images/welding.jpeg';
+import contactBg from '../../../assets/images/slider5.jpg';
 import AnimatedSection from '../../../components/AnimatedSection';
 
 const Contact = () => {
@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="relative">
+    <section id="contact" className="relative">
       {/* Background Image */}
       <div className="absolute inset-0 bg-fixed bg-cover bg-center z-0"
         style={{
@@ -136,88 +136,105 @@ const Contact = () => {
               </div>
             </AnimatedSection>
 
-            <AnimatedSection className="bg-transparent bg-opacity-10 backdrop-blur-lg p-8 rounded-xl">
-              {/* Contact Form */}
-              <h3 className="text-2xl font-bold text-white mb-8">
-                Send Us a Message
-              </h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-200">
-                    Full Name
-                  </label>
-                  <input
-                  placeholder="Type your full name"
-                    type="text"
-                    name="name"
-                    id="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="mt-1 block w-full rounded-md bg-white bg-opacity-20 border-transparent placeholder-gray-400 text-gray-900 focus:border-[#CD7F32] focus:ring-[#CD7F32] sm:text-sm"
-                    required
-                  />
-                </div>
+{/* Contact Form with Adjusted Element Sizes */}
+<AnimatedSection className="bg-inherit bg-opacity-80 backdrop-blur-lg p-8 rounded-xl shadow-xl">
+  {/* Contact Form */}
+  <h3 className="text-2xl font-bold text-white mb-8 text-center">
+    Send Us a Message
+  </h3>
+  
+  {/* Success/Error Messages would go here */}
+  
+  <form onSubmit={handleSubmit} className="space-y-8">
+    <div>
+      <label htmlFor="name" className="block text-sm font-medium text-gray-200">
+        Full Name <span className="text-red-500">*</span>
+      </label>
+      <input
+        placeholder="Type your full name"
+        type="text"
+        name="name"
+        id="name"
+        value={formData.name}
+        onChange={handleChange}
+        className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
+          placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+          text-base transition-colors"
+        required
+      />
+    </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-200">
-                    Email Address
-                  </label>
-                  <input
-                  placeholder="Type your email address"
-                    type="email"
-                    name="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="mt-1 block w-full rounded-md bg-white bg-opacity-20 border-transparent placeholder-gray-400 text-gray-900 focus:border-[#CD7F32] focus:ring-[#CD7F32] sm:text-sm"
-                    required
-                  />
-                </div>
+    <div>
+      <label htmlFor="email" className="block text-sm font-medium text-gray-200">
+        Email Address <span className="text-red-500">*</span>
+      </label>
+      <input
+        placeholder="Type your email address"
+        type="email"
+        name="email"
+        id="email"
+        value={formData.email}
+        onChange={handleChange}
+        className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
+          placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+          text-base transition-colors"
+        required
+      />
+    </div>
 
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-200">
-                    Phone Number
-                  </label>
-                  <input
-                  placeholder="Type your phone number"
-                    type="tel"
-                    name="phone"
-                    id="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="mt-1 block w-full rounded-md bg-white bg-opacity-20 border-transparent placeholder-gray-400 text-gray-900 focus:border-[#CD7F32] focus:ring-[#CD7F32] sm:text-sm"
-                  />
-                </div>
+    <div>
+      <label htmlFor="phone" className="block text-sm font-medium text-gray-200">
+        Phone Number
+      </label>
+      <input
+        placeholder="Type your phone number (optional)"
+        type="tel"
+        name="phone"
+        id="phone"
+        value={formData.phone}
+        onChange={handleChange}
+        className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
+          placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+          text-base transition-colors"
+      />
+    </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-200">
-                    Message
-                  </label>
-                  <textarea
-                  placeholder="Type your message here..."
-                    name="message"
-                    id="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="mt-1 block w-full rounded-md bg-white bg-opacity-20 border-transparent placeholder-gray-400 text-gray-900 focus:border-[#CD7F32] focus:ring-[#CD7F32] sm:text-sm"
-                    required
-                  ></textarea>
-                </div>
+    <div>
+      <label htmlFor="message" className="block text-sm font-medium text-gray-200">
+        Message <span className="text-red-500">*</span>
+      </label>
+      <textarea
+        placeholder="Type your message here..."
+        name="message"
+        id="message"
+        rows={5}
+        value={formData.message}
+        onChange={handleChange}
+        className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
+          placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+          text-base transition-colors"
+        required
+      ></textarea>
+    </div>
 
-                <button
-                  type="submit"
-                  className="w-full flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#CD7F32] hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CD7F32]"
-                >
-                  <FiSend className="mr-2" />
-                  Send Message
-                </button>
-              </form>
-            </AnimatedSection>
+    <div className="flex justify-center mt-8">
+      <button
+        type="submit"
+        className="px-8 py-2 border border-transparent 
+          text-base font-medium rounded-md text-white bg-[#CD7F32] 
+          hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CD7F32]
+          transition-all duration-200 mx-auto w-1/2"
+      >
+        <FiSend className="inline mr-2" />
+        Send Message
+      </button>
+    </div>
+  </form>
+</AnimatedSection>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

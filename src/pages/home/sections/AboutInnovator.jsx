@@ -22,7 +22,7 @@ const AboutInnovator = () => {
     //     <p className="mt-2 text-gray-700">Meet the visionary behind this project, dedicated to innovation and excellence.</p>
     //   </div>
 
-    <div id="innovator" className="py-16 bg-gray-50">
+    <section id="innovator" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="lg:text-center">
@@ -77,7 +77,7 @@ const AboutInnovator = () => {
           </AnimatedSection>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

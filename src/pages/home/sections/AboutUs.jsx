@@ -4,7 +4,7 @@ import AnimatedSection from '../../../components/AnimatedSection';
 
 const AboutUs = () => {
   return (
-    <div id="about" className="py-16 bg-white">
+    <section id="about" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center">
@@ -118,7 +118,7 @@ const AboutUs = () => {
           </div>
         </AnimatedSection>
       </div>
-    </div>
+    </section>
   );
 };
 
