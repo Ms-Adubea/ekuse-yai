@@ -8,7 +8,8 @@ import blackMan from '../../../assets/images/black-man.jpg';
 import cuttingMetal from '../../../assets/images/cutting-metal-with-plasma-equipment-plant.jpg';
 import portraitMan from '../../../assets/images/portrait-man.jpg';
 import slider5 from '../../../assets/images/slider5.jpg';
-import ginEquipment from '../../../assets/images/gin-equipment.jpg';
+import ginEquipment from '../../../assets/images/ginger-slicer2.jpg';
+import cashewRoaster from '../../../assets/images/cashew-roaster.jpg'
 import AnimatedSection from '../../../components/AnimatedSection';
 
 const Gallery = () => {
@@ -19,24 +20,24 @@ const Gallery = () => {
   const categories = [
     { id: 'all', name: 'All Products' },
     { id: 'agricultural', name: 'Agricultural' },
-    { id: 'industrial', name: 'Industrial' },
+    { id: 'commercial', name: 'Commercial' },
     { id: 'domestic', name: 'Domestic' },
   ];
 
   const products = [
     {
       id: 1,
-      name: 'Cassava Grater',
-      category: 'agricultural',
-      image: blackMan,
-      description: 'High-efficiency cassava processing equipment',
+      name: 'Ginger Slicing Machine',
+      category: 'commercial',
+      image: ginEquipment,
+      description: 'High-efficiency ginger processing equipment',
     },
     {
       id: 2,
-      name: 'Palm Kernel Cracker',
-      category: 'industrial',
-      image: cuttingMetal,
-      description: 'Industrial-grade palm kernel processing machine',
+      name: 'Cashew Roaster Machine',
+      category: 'commercial',
+      image: cashewRoaster,
+      description: 'Industrial-grade cashew roasting machine',
     },
     {
       id: 3,
@@ -55,7 +56,7 @@ const Gallery = () => {
     {
       id: 5,
       name: 'Industrial Mixer',
-      category: 'industrial',
+      category: 'commercial',
       image: ginEquipment,
       description: 'Large-scale mixing equipment',
     },
@@ -63,7 +64,7 @@ const Gallery = () => {
       id: 6,
       name: 'Agricultural Sprayer',
       category: 'agricultural',
-      image: 'https://images.pexels.com/photos/2132171/pexels-photo-2132171.jpeg',
+      image: cuttingMetal,
       description: 'Precision farming equipment',
     },
     {
@@ -76,7 +77,7 @@ const Gallery = () => {
     {
       id: 8,
       name: 'Industrial Conveyor',
-      category: 'industrial',
+      category: 'commercial',
       image: 'https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg',
       description: 'Automated material handling system',
     },

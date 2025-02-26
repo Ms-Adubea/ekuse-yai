@@ -1,10 +1,15 @@
-import React from 'react';
-import { FaCheckCircle, FaSearchPlus, FaTools, FaCog } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaCheckCircle, FaSearchPlus, FaTools, FaCog, FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import ginEquipment from '../../../assets/images/gin-equipment.jpg';
+import ginEquipment from '../../../assets/images/ginger-slicer.jpg';
+import gingerMachine from '../../../assets/images/ginger-slicer2.jpg';
+import gingerVideo from '../../../assets/videos/ginger-slicing-video.mp4'; // Import the video
 import AnimatedSection from '../../../components/AnimatedSection';
 
 const AboutProducts = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('images'); // State to manage active tab
+
   const features = [
     {
       title: "High-capacity Processing",
@@ -50,6 +55,9 @@ const AboutProducts = () => {
     }
   ];
 
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <section id="product" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,11 +84,19 @@ const AboutProducts = () => {
               <img
                 src={ginEquipment}
                 alt="GingerSlice Pro"
-                className="rounded-lg shadow-xl w-full"
+                className="rounded-lg shadow-xl w-full max-w-md mx-auto" // Resized image
               />
               <div className="absolute top-4 right-4 bg-[#CD7F32] text-white px-3 py-1 rounded-full text-sm">
                 Industrial Grade
               </div>
+              {/* View More Button with Pulsing Effect */}
+              <button
+                onClick={openModal}
+                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#CD7F32] text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors duration-300 flex items-center justify-center text-lg animate-pulse hover:animate-none"
+              >
+                <FaSearchPlus className="mr-2" />
+                View More
+              </button>
             </div>
           </AnimatedSection>
 
@@ -116,12 +132,6 @@ const AboutProducts = () => {
                   ))}
                 </ul>
               </div>
-
-              {/* Action Button */}
-              {/* <button className="mt-8 w-full bg-[#CD7F32] text-white py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors duration-300 flex items-center justify-center text-lg">
-                <FaSearchPlus className="mr-2" />
-                Request Quote
-              </button> */}
             </div>
           </AnimatedSection>
         </div>
@@ -162,6 +172,75 @@ const AboutProducts = () => {
           </div>
         </AnimatedSection>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg w-full max-w-2xl overflow-y-auto max-h-[90vh] relative">
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
+            >
+              <FaTimes className="w-6 h-6" />
+            </button>
+
+            {/* Modal Content */}
+            <div className="p-6">
+              <h2 className="text-2xl font-bold text-[#CD7F32] mb-6">Product Gallery</h2>
+
+              {/* Tabs */}
+              <div className="flex space-x-4 border-b border-gray-200 mb-6">
+                <button
+                  onClick={() => setActiveTab('images')}
+                  className={`pb-2 px-4 ${
+                    activeTab === 'images'
+                      ? 'border-b-2 border-[#CD7F32] text-[#CD7F32]'
+                      : 'text-gray-600'
+                  }`}
+                >
+                  Images
+                </button>
+                <button
+                  onClick={() => setActiveTab('videos')}
+                  className={`pb-2 px-4 ${
+                    activeTab === 'videos'
+                      ? 'border-b-2 border-[#CD7F32] text-[#CD7F32]'
+                      : 'text-gray-600'
+                  }`}
+                >
+                  Videos
+                </button>
+              </div>
+
+              {/* Tab Content */}
+              {activeTab === 'images' && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <img
+                    src={ginEquipment}
+                    alt="GingerSlice Pro"
+                    className="rounded-lg shadow-xl w-full"
+                  />
+                  <img
+                    src={gingerMachine}
+                    alt="GingerSlice Pro"
+                    className="rounded-lg shadow-xl w-full"
+                  />
+                </div>
+              )}
+
+              {activeTab === 'videos' && (
+                <div className="w-full">
+                  <video controls className="rounded-lg shadow-xl w-full">
+                    <source src={gingerVideo} type="video/mp4" /> {/* Use the imported video */}
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
