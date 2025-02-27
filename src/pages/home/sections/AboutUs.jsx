@@ -1,69 +1,71 @@
-import React from 'react';
-import { FaHistory, FaEye, FaBullseye } from 'react-icons/fa';
-import AnimatedSection from '../../../components/AnimatedSection';
+import React from "react";
+import { FaHistory, FaEye, FaBullseye } from "react-icons/fa";
+import AnimatedSection from "../../../components/AnimatedSection";
+import bgImage from "../../../assets/images/newemelogo.png"; // Import the background image
 
 const AboutUs = () => {
   return (
-    <section id="about" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="about"
+      className="py-20 bg-cover bg-no-repeat bg-fixed relative"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      {/* Glassmorphism Overlay */}
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-lg"></div>
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center">
-            <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
+            <h2 className="text-lg font-semibold text-[#CD7F32] uppercase tracking-wider">
               About Us
             </h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Our Journey
+            <p className="mt-2 text-4xl font-extrabold text-gray-900 sm:text-5xl">
+              Crafting Excellence in Metal Engineering
             </p>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-              Building excellence in metal engineering since 2020
+            <p className="mt-4 max-w-2xl text-lg text-gray-700 mx-auto">
+              Transforming ideas into high-quality metal works and machinery since 2020.
             </p>
           </div>
         </AnimatedSection>
 
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* History */}
           <AnimatedSection>
-            <div className="bg-gray-50 rounded-xl p-8 h-full">
-              <div className="flex items-center justify-center w-12 h-12 bg-[#CD7F32] rounded-full mb-6">
-                <FaHistory className="w-6 h-6 text-white" />
+            <div className="bg-white/70 shadow-lg rounded-xl p-8 h-full transition-transform transform hover:scale-105">
+              <div className="flex items-center justify-center w-14 h-14 bg-[#CD7F32] rounded-full mb-6">
+                <FaHistory className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Our History</h3>
-              <p className="text-gray-600">
-                Established in 2020, Ekuse Metal Engineering emerged from a vision to revolutionize 
-                food processing in Ghana. Starting with innovative solutions for ginger processing, 
-                we've grown to become a trusted name in industrial food processing equipment.
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our History</h3>
+              <p className="text-gray-700">
+                Established in 2020, Ekuse Metal Engineering was founded to redefine
+                metal fabrication and machine manufacturing in Ghana.
               </p>
-              <p className="mt-4 text-gray-600">
-                Our journey began with the development of the GingerSlice Pro, addressing the 
-                critical need for efficient ginger processing in commercial kitchens and food 
-                processing facilities.
+              <p className="mt-4 text-gray-700">
+                From our pioneering GingerSlice Pro to a range of industrial solutions,
+                we are committed to precision, innovation, and quality craftsmanship.
               </p>
             </div>
           </AnimatedSection>
 
           {/* Mission */}
           <AnimatedSection>
-            <div className="bg-gray-50 rounded-xl p-8 h-full">
-              <div className="flex items-center justify-center w-12 h-12 bg-[#CD7F32] rounded-full mb-6">
-                <FaBullseye className="w-6 h-6 text-white" />
+            <div className="bg-white/70 shadow-lg rounded-xl p-8 h-full transition-transform transform hover:scale-105">
+              <div className="flex items-center justify-center w-14 h-14 bg-[#CD7F32] rounded-full mb-6">
+                <FaBullseye className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h3>
-              <p className="text-gray-600">
-                To provide innovative, high-quality metal engineering solutions that enhance 
-                productivity and efficiency in the food processing industry. We are committed to:
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+              <p className="text-gray-700">
+                To deliver cutting-edge metal engineering solutions that enhance efficiency across industries.
               </p>
-              <ul className="mt-4 space-y-2 text-gray-600">
+              <ul className="mt-4 space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-2">•</span>
-                  Delivering excellence in product quality
+                  <span className="text-[#CD7F32] mr-3">•</span> Innovation in machine and metal fabrication
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-2">•</span>
-                  Ensuring customer satisfaction
+                  <span className="text-[#CD7F32] mr-3">•</span> Commitment to customer satisfaction
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-2">•</span>
-                  Contributing to local industry growth
+                  <span className="text-[#CD7F32] mr-3">•</span> Driving industrial growth in Ghana
                 </li>
               </ul>
             </div>
@@ -71,48 +73,44 @@ const AboutUs = () => {
 
           {/* Vision */}
           <AnimatedSection>
-            <div className="bg-gray-50 rounded-xl p-8 h-full">
-              <div className="flex items-center justify-center w-12 h-12 bg-[#CD7F32] rounded-full mb-6">
-                <FaEye className="w-6 h-6 text-white" />
+            <div className="bg-white/70 shadow-lg rounded-xl p-8 h-full transition-transform transform hover:scale-105">
+              <div className="flex items-center justify-center w-14 h-14 bg-[#CD7F32] rounded-full mb-6">
+                <FaEye className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Our Vision</h3>
-              <p className="text-gray-600">
-                To become the leading manufacturer of innovative food processing equipment in 
-                West Africa, recognized for:
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+              <p className="text-gray-700">
+                To be the leading provider of innovative metal engineering solutions in West Africa.
               </p>
-              <ul className="mt-4 space-y-2 text-gray-600">
+              <ul className="mt-4 space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-2">•</span>
-                  Technological innovation
+                  <span className="text-[#CD7F32] mr-3">•</span> Excellence in engineering and craftsmanship
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-2">•</span>
-                  Sustainable manufacturing
+                  <span className="text-[#CD7F32] mr-3">•</span> Sustainability in manufacturing
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-2">•</span>
-                  Industry leadership
+                  <span className="text-[#CD7F32] mr-3">•</span> Leadership in industrial innovation
                 </li>
               </ul>
             </div>
           </AnimatedSection>
         </div>
 
-        {/* Additional Info */}
+        {/* Achievements */}
         <AnimatedSection>
-          <div className="mt-16 text-center">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-6">
-                <div className="text-4xl font-bold text-[#CD7F32]">3+</div>
-                <p className="mt-2 text-gray-600">Years of Excellence</p>
+          <div className="mt-20 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              <div className="p-8 bg-white/70 shadow-md rounded-lg">
+                <div className="text-5xl font-bold text-[#CD7F32]">3+</div>
+                <p className="mt-3 text-gray-700">Years of Excellence</p>
               </div>
-              <div className="p-6">
-                <div className="text-4xl font-bold text-[#CD7F32]">50+</div>
-                <p className="mt-2 text-gray-600">Satisfied Clients</p>
+              <div className="p-8 bg-white/70 shadow-md rounded-lg">
+                <div className="text-5xl font-bold text-[#CD7F32]">50+</div>
+                <p className="mt-3 text-gray-700">Satisfied Clients</p>
               </div>
-              <div className="p-6">
-                <div className="text-4xl font-bold text-[#CD7F32]">100%</div>
-                <p className="mt-2 text-gray-600">Made in Ghana</p>
+              <div className="p-8 bg-white/70 shadow-md rounded-lg">
+                <div className="text-5xl font-bold text-[#CD7F32]">100%</div>
+                <p className="mt-3 text-gray-700">Made in Ghana</p>
               </div>
             </div>
           </div>

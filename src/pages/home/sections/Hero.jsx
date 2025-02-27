@@ -26,7 +26,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="home" className="relative bg-orange-900 h-screen flex items-center">
+    <section id="home" className="relative bg-orange-900 h-screen flex items-center">
       {/* Background Slideshow */}
       <div className="absolute inset-0 transition-opacity duration-1000 ease-in-out">
         <img
@@ -52,7 +52,7 @@ const Hero = () => {
           <FaArrowRight className="ml-2" />
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 
