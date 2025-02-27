@@ -150,7 +150,7 @@ const AboutProducts = () => {
         </AnimatedSection>
 
         {/* Impact Section */}
-        <AnimatedSection>
+        {/* <AnimatedSection>
           <div className="mt-16 bg-gray-50 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
               Making a Difference
@@ -170,12 +170,13 @@ const AboutProducts = () => {
               </div>
             </div>
           </div>
-        </AnimatedSection>
+        </AnimatedSection> */}
       </div>
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        // <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-lg w-full max-w-2xl overflow-y-auto max-h-[90vh] relative">
             {/* Close Button */}
             <button
