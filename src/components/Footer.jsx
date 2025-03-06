@@ -1,6 +1,6 @@
 import React from "react";
 import { FiMenu, FiX, FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaTiktok } from 'react-icons/fa';
 import { FaWhatsapp } from "react-icons/fa6";
 
 const Footer = () => {
@@ -18,13 +18,13 @@ const Footer = () => {
               <a href="https://www.facebook.com/share/1AyriFF8qA/" target="_blank" className="text-[#FFF3E0] hover:text-yellow-400">
                 <FaFacebook className="h-6 w-6" />
               </a>
-              <a href="https://x.com/DavidSam232743?t=0ep7eVDcmNgi7V47wxX06g&s=08" target="_blank" className="text-[#FFF3E0] hover:text-yellow-400">
-                <FaTwitter className="h-6 w-6" />
+              <a href="https://www.tiktok.com/@user8612852865311?is_from_webapp=1&sender_device=pc" target="_blank" className="text-[#FFF3E0] hover:text-yellow-400">
+                <FaTiktok className="h-6 w-6" />
               </a>
               <a href="https://wa.me/+233547850760" target="_blank" className="text-[#FFF3E0] hover:text-yellow-400">
                 <FaWhatsapp className="h-6 w-6" />
               </a>
-              <a href="https://www.instagram.com/davidsam8882?igsh=NGYxenZsMmhvb2hp" target="_blank" className="text-[#FFF3E0] hover:text-yellow-400">
+              <a href="https://www.instagram.com/ekuse_metal_engineering/" target="_blank" className="text-[#FFF3E0] hover:text-yellow-400">
                 <FaInstagram className="h-6 w-6" />
               </a>
             </div>
@@ -42,8 +42,8 @@ const Footer = () => {
 
               <div className="flex items-center">
                 <FiMail className="h-5 w-5 text-[#FFF3E0] mr-2" />
-                <a href="mailto:davidksam32@gmail.com">
-                <span className="text-white hover:text-yellow-400">davidksam32@gmail.com</span>
+                <a href="mailto:ekusemetalengineering@gmail.com">
+                <span className="text-white hover:text-yellow-400">ekusemetalengineering@gmail.com</span>
                 </a>
               </div>
 

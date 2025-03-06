@@ -11,6 +11,7 @@ import slider5 from '../../../assets/images/slider5.jpg';
 import ginEquipment from '../../../assets/images/ginger-slicer2.jpg';
 import cashewRoaster from '../../../assets/images/cashew-roaster.jpg'
 import AnimatedSection from '../../../components/AnimatedSection';
+import ekuseOven from '../../../assets/images/ai-oven4.png'
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -76,10 +77,10 @@ const Gallery = () => {
     },
     {
       id: 8,
-      name: 'Industrial Conveyor',
+      name: 'Oven',
       category: 'commercial',
-      image: 'https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg',
-      description: 'Automated material handling system',
+      image: ekuseOven,
+      description: 'A high-quality industrial catering oven designed and manufactured by Ekuse Metal Engineering. This heavy-duty oven features a robust metal body, multiple cooking compartments, and efficient heat distribution for professional kitchens and large-scale food production. Equipped with caster wheels for easy mobility, a durable insulated chamber for optimal temperature retention, and a sleek, functional design, this oven is perfect for bakeries, restaurants, and catering businesses.',
     },
     {
       id: 9,

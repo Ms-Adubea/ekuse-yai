@@ -105,7 +105,7 @@ const AboutProducts = () => {
             <div>
               <p className="text-lg text-gray-600 mb-8">
                 The GingerSlice Pro addresses a critical challenge in food preparation: 
-                the time-consuming and potentially hazardous process of manually slicing ginger. 
+                the time-consuming process of manually slicing ginger. 
                 This innovative device combines efficiency with safety, making it an essential 
                 tool for commercial kitchens and food processing facilities.
               </p>
@@ -113,7 +113,7 @@ const AboutProducts = () => {
               {/* Features Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 {features.map((feature, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow border-b-amber-600">
                     <h4 className="text-lg font-semibold text-[#CD7F32] mb-2">{feature.title}</h4>
                     <p className="text-gray-600">{feature.description}</p>
                   </div>
@@ -175,8 +175,8 @@ const AboutProducts = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        // <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-        <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        {/* <div className="fixed inset-0 flex items-center justify-center z-50 p-4"> */}
           <div className="bg-white rounded-lg w-full max-w-2xl overflow-y-auto max-h-[90vh] relative">
             {/* Close Button */}
             <button

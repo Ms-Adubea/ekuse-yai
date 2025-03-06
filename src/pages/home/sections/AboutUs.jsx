@@ -5,11 +5,19 @@ import bgImage from "../../../assets/images/newemelogo.png"; // Import the backg
 
 const AboutUs = () => {
   return (
+    // <section
+    //   id="about"
+    //   className="py-20 bg-cover bg-no-repeat bg-fixed relative"
+    //   style={{ backgroundImage: `url(${bgImage})` }}
+    // >
     <section
-      id="about"
-      className="py-20 bg-cover bg-no-repeat bg-fixed relative"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+  id="about"
+  className="py-20 bg-cover bg-no-repeat md:bg-fixed relative"
+  style={{ 
+    backgroundImage: `url(${bgImage})`,
+    backgroundPosition: 'center'
+  }}
+>
       {/* Glassmorphism Overlay */}
       <div className="absolute inset-0 bg-white/10 backdrop-blur-lg"></div>
 

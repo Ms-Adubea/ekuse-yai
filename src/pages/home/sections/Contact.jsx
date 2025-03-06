@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 import { FiPhone, FiMail, FiMapPin, FiSend } from 'react-icons/fi';
-import { FaWhatsapp, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaWhatsapp, FaFacebook, FaTwitter, FaInstagram, FaTiktok } from 'react-icons/fa';
 import contactBg from '../../../assets/images/slider5.jpg';
 import AnimatedSection from '../../../components/AnimatedSection';
 
@@ -19,10 +20,43 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+    try {
+      const response = await fetch('https://formspree.io/f/mdkennel', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent!',
+          text: 'Your message has been sent successfully. We will get back to you soon.',
+          confirmButtonColor: '#CD7F32'
+        });
+
+        // Reset form after successful submission
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Failed to send message. Please try again later.',
+          confirmButtonColor: '#CD7F32'
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Network Error',
+        text: 'An error occurred. Please check your internet connection and try again.',
+        confirmButtonColor: '#CD7F32'
+      });
+    }
   };
 
   return (
@@ -84,8 +118,8 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <p className="text-lg font-medium text-white">Email</p>
-                    <a href="mailto:davidksam32@gmail.com" className="text-gray-300 hover:text-[#CD7F32]">
-                      davidksam32@gmail.com
+                    <a href="mailto:ekusemetalengineering@gmail.com" className="text-gray-300 hover:text-[#CD7F32]">
+                      ekusemetalengineering@gmail.com
                     </a>
                   </div>
                 </div>
@@ -112,10 +146,10 @@ const Contact = () => {
                   <a href="https://www.facebook.com/share/1AyriFF8qA/" target="_blank" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
                     <FaFacebook className="h-5 w-5" />
                   </a>
-                  <a href="https://x.com/DavidSam232743?t=0ep7eVDcmNgi7V47wxX06g&s=08" target="_blank" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
-                    <FaTwitter className="h-5 w-5" />
+                  <a href="https://www.tiktok.com/@user8612852865311?is_from_webapp=1&sender_device=pc" target="_blank" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
+                    <FaTiktok className="h-5 w-5" />
                   </a>
-                  <a href="https://www.instagram.com/davidsam8882?igsh=NGYxenZsMmhvb2hp" target="_blank" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <a href="https://www.instagram.com/ekuse_metal_engineering/" target="_blank" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
                     <FaInstagram className="h-5 w-5" />
                   </a>
                 </div>
@@ -136,101 +170,99 @@ const Contact = () => {
               </div>
             </AnimatedSection>
 
-{/* Contact Form with Adjusted Element Sizes */}
-<AnimatedSection className="bg-inherit bg-opacity-80 backdrop-blur-lg p-8 rounded-xl shadow-xl">
-  {/* Contact Form */}
-  <h3 className="text-2xl font-bold text-white mb-8 text-center">
-    Send Us a Message
-  </h3>
-  
-  {/* Success/Error Messages would go here */}
-  
-  <form onSubmit={handleSubmit} className="space-y-8">
-    <div>
-      <label htmlFor="name" className="block text-sm font-medium text-gray-200">
-        Full Name <span className="text-red-500">*</span>
-      </label>
-      <input
-        placeholder="Type your full name"
-        type="text"
-        name="name"
-        id="name"
-        value={formData.name}
-        onChange={handleChange}
-        className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
-          placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
-          text-base transition-colors"
-        required
-      />
-    </div>
+            {/* Contact Form with Adjusted Element Sizes */}
+            <AnimatedSection className="bg-inherit bg-opacity-80 backdrop-blur-lg p-8 rounded-xl shadow-xl">
+              {/* Contact Form */}
+              <h3 className="text-2xl font-bold text-white mb-8 text-center">
+                Send Us a Message
+              </h3>
 
-    <div>
-      <label htmlFor="email" className="block text-sm font-medium text-gray-200">
-        Email Address <span className="text-red-500">*</span>
-      </label>
-      <input
-        placeholder="Type your email address"
-        type="email"
-        name="email"
-        id="email"
-        value={formData.email}
-        onChange={handleChange}
-        className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
-          placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
-          text-base transition-colors"
-        required
-      />
-    </div>
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-200">
+                    Full Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    placeholder="Type your full name"
+                    type="text"
+                    name="name"
+                    id="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
+                      placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+                      text-base transition-colors"
+                    required
+                  />
+                </div>
 
-    <div>
-      <label htmlFor="phone" className="block text-sm font-medium text-gray-200">
-        Phone Number
-      </label>
-      <input
-        placeholder="Type your phone number (optional)"
-        type="tel"
-        name="phone"
-        id="phone"
-        value={formData.phone}
-        onChange={handleChange}
-        className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
-          placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
-          text-base transition-colors"
-      />
-    </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-200">
+                    Email Address <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    placeholder="Type your email address"
+                    type="email"
+                    name="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
+                      placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+                      text-base transition-colors"
+                    required
+                  />
+                </div>
 
-    <div>
-      <label htmlFor="message" className="block text-sm font-medium text-gray-200">
-        Message <span className="text-red-500">*</span>
-      </label>
-      <textarea
-        placeholder="Type your message here..."
-        name="message"
-        id="message"
-        rows={5}
-        value={formData.message}
-        onChange={handleChange}
-        className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
-          placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
-          text-base transition-colors"
-        required
-      ></textarea>
-    </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-200">
+                    Phone Number
+                  </label>
+                  <input
+                    placeholder="Type your phone number (optional)"
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
+                      placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+                      text-base transition-colors"
+                  />
+                </div>
 
-    <div className="flex justify-center mt-8">
-      <button
-        type="submit"
-        className="px-8 py-2 border border-transparent 
-          text-base font-medium rounded-md text-white bg-[#CD7F32] 
-          hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CD7F32]
-          transition-all duration-200 mx-auto w-1/2"
-      >
-        <FiSend className="inline mr-2" />
-        Send Message
-      </button>
-    </div>
-  </form>
-</AnimatedSection>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-200">
+                    Message <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    placeholder="Type your message here..."
+                    name="message"
+                    id="message"
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
+                      placeholder-gray-400 text-black focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+                      text-base transition-colors"
+                    required
+                  ></textarea>
+                </div>
+
+                <div className="flex justify-center mt-8">
+                  <button
+                    type="submit"
+                    className="px-8 py-2 border border-transparent 
+                      text-base font-medium rounded-md text-white bg-[#CD7F32] 
+                      hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CD7F32]
+                      transition-all duration-200 mx-auto w-1/2"
+                  >
+                    <FiSend className="inline mr-2" />
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </AnimatedSection>
           </div>
         </div>
       </div>
