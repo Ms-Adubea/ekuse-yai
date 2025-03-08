@@ -39,17 +39,17 @@ const AboutProducts = () => {
 
   const additionalServices = [
     {
-      icon: <FaTools className="w-12 h-12 text-[#CD7F32] mx-auto mb-4" />,
+      icon: <FaTools className="w-12 h-12 text-[#EF6503] mx-auto mb-4" />,
       title: "Professional Installation",
       description: "Expert setup and configuration for your facility"
     },
     {
-      icon: <FaCog className="w-12 h-12 text-[#CD7F32] mx-auto mb-4" />,
+      icon: <FaCog className="w-12 h-12 text-[#EF6503] mx-auto mb-4" />,
       title: "Maintenance Support",
       description: "Regular maintenance and quick repairs"
     },
     {
-      icon: <FaSearchPlus className="w-12 h-12 text-[#CD7F32] mx-auto mb-4" />,
+      icon: <FaSearchPlus className="w-12 h-12 text-[#EF6503] mx-auto mb-4" />,
       title: "Training Included",
       description: "Comprehensive operator training provided"
     }
@@ -64,7 +64,7 @@ const AboutProducts = () => {
         <AnimatedSection>
           {/* Header Section */}
           <div className="text-center mb-16">
-            <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
+            <h2 className="text-base text-[#EF6503] font-semibold tracking-wide uppercase">
               Our Recent Innovation
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -86,13 +86,13 @@ const AboutProducts = () => {
                 alt="GingerSlice Pro"
                 className="rounded-lg shadow-xl w-full max-w-md mx-auto" // Resized image
               />
-              <div className="absolute top-4 right-4 bg-[#CD7F32] text-white px-3 py-1 rounded-full text-sm">
+              <div className="absolute top-4 right-4 bg-[#EF6503] text-white px-3 py-1 rounded-full text-sm">
                 Industrial Grade
               </div>
               {/* View More Button with Pulsing Effect */}
               <button
                 onClick={openModal}
-                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#CD7F32] text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors duration-300 flex items-center justify-center text-lg animate-pulse hover:animate-none"
+                className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#EF6503] text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors duration-300 flex items-center justify-center text-lg animate-pulse hover:animate-none"
               >
                 <FaSearchPlus className="mr-2" />
                 View More
@@ -113,8 +113,8 @@ const AboutProducts = () => {
               {/* Features Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 {features.map((feature, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow border-b-amber-600">
-                    <h4 className="text-lg font-semibold text-[#CD7F32] mb-2">{feature.title}</h4>
+                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow border-b-[#EF6503]">
+                    <h4 className="text-lg font-semibold text-[#EF6503] mb-2">{feature.title}</h4>
                     <p className="text-gray-600">{feature.description}</p>
                   </div>
                 ))}
@@ -126,7 +126,7 @@ const AboutProducts = () => {
                 <ul className="space-y-3">
                   {benefits.map((benefit, index) => (
                     <li key={index} className="flex items-center text-gray-600">
-                      <FaCheckCircle className="text-[#CD7F32] mr-3" />
+                      <FaCheckCircle className="text-[#EF6503] mr-3" />
                       {benefit}
                     </li>
                   ))}
@@ -137,7 +137,7 @@ const AboutProducts = () => {
         </div>
 
         {/* Additional Services Section */}
-        <AnimatedSection>
+        {/* <AnimatedSection>
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             {additionalServices.map((service, index) => (
               <div key={index} className="p-6 bg-gray-50 rounded-xl shadow-md">
@@ -147,7 +147,7 @@ const AboutProducts = () => {
               </div>
             ))}
           </div>
-        </AnimatedSection>
+        </AnimatedSection> */}
 
         {/* Impact Section */}
         {/* <AnimatedSection>
@@ -188,7 +188,7 @@ const AboutProducts = () => {
 
             {/* Modal Content */}
             <div className="p-6">
-              <h2 className="text-2xl font-bold text-[#CD7F32] mb-6">Product Gallery</h2>
+              <h2 className="text-2xl font-bold text-[#EF6503] mb-6">Product Gallery</h2>
 
               {/* Tabs */}
               <div className="flex space-x-4 border-b border-gray-200 mb-6">
@@ -196,7 +196,7 @@ const AboutProducts = () => {
                   onClick={() => setActiveTab('images')}
                   className={`pb-2 px-4 ${
                     activeTab === 'images'
-                      ? 'border-b-2 border-[#CD7F32] text-[#CD7F32]'
+                      ? 'border-b-2 border-[#EF6503] text-[#EF6503]'
                       : 'text-gray-600'
                   }`}
                 >

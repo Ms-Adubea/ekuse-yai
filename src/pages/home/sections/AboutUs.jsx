@@ -24,7 +24,7 @@ const AboutUs = () => {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center">
-            <h2 className="text-lg font-semibold text-[#CD7F32] uppercase tracking-wider">
+            <h2 className="text-lg font-semibold text-[#EF6503] uppercase tracking-wider">
               About Us
             </h2>
             <p className="mt-2 text-4xl font-extrabold text-gray-900 sm:text-5xl">
@@ -40,7 +40,7 @@ const AboutUs = () => {
           {/* History */}
           <AnimatedSection>
             <div className="bg-white/70 shadow-lg rounded-xl p-8 h-full transition-transform transform hover:scale-105">
-              <div className="flex items-center justify-center w-14 h-14 bg-[#CD7F32] rounded-full mb-6">
+              <div className="flex items-center justify-center w-14 h-14 bg-[#EF6503] rounded-full mb-6">
                 <FaHistory className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our History</h3>
@@ -58,7 +58,7 @@ const AboutUs = () => {
           {/* Mission */}
           <AnimatedSection>
             <div className="bg-white/70 shadow-lg rounded-xl p-8 h-full transition-transform transform hover:scale-105">
-              <div className="flex items-center justify-center w-14 h-14 bg-[#CD7F32] rounded-full mb-6">
+              <div className="flex items-center justify-center w-14 h-14 bg-[#EF6503] rounded-full mb-6">
                 <FaBullseye className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
@@ -67,13 +67,13 @@ const AboutUs = () => {
               </p>
               <ul className="mt-4 space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-3">•</span> Innovation in machine and metal fabrication
+                  <span className="text-[#EF6503] mr-3">•</span> Innovation in machine and metal fabrication
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-3">•</span> Commitment to customer satisfaction
+                  <span className="text-[#EF6503] mr-3">•</span> Commitment to customer satisfaction
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-3">•</span> Driving industrial growth in Ghana
+                  <span className="text-[#EF6503] mr-3">•</span> Driving industrial growth in Ghana
                 </li>
               </ul>
             </div>
@@ -82,7 +82,7 @@ const AboutUs = () => {
           {/* Vision */}
           <AnimatedSection>
             <div className="bg-white/70 shadow-lg rounded-xl p-8 h-full transition-transform transform hover:scale-105">
-              <div className="flex items-center justify-center w-14 h-14 bg-[#CD7F32] rounded-full mb-6">
+              <div className="flex items-center justify-center w-14 h-14 bg-[#EF6503] rounded-full mb-6">
                 <FaEye className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
@@ -91,13 +91,13 @@ const AboutUs = () => {
               </p>
               <ul className="mt-4 space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-3">•</span> Excellence in engineering and craftsmanship
+                  <span className="text-[#EF6503] mr-3">•</span> Excellence in engineering and craftsmanship
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-3">•</span> Sustainability in manufacturing
+                  <span className="text-[#EF6503] mr-3">•</span> Sustainability in manufacturing
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#CD7F32] mr-3">•</span> Leadership in industrial innovation
+                  <span className="text-[#EF6503] mr-3">•</span> Leadership in industrial innovation
                 </li>
               </ul>
             </div>
@@ -109,15 +109,15 @@ const AboutUs = () => {
           <div className="mt-20 text-center">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               <div className="p-8 bg-white/70 shadow-md rounded-lg">
-                <div className="text-5xl font-bold text-[#CD7F32]">3+</div>
+                <div className="text-5xl font-bold text-[#EF6503]">3+</div>
                 <p className="mt-3 text-gray-700">Years of Excellence</p>
               </div>
               <div className="p-8 bg-white/70 shadow-md rounded-lg">
-                <div className="text-5xl font-bold text-[#CD7F32]">50+</div>
+                <div className="text-5xl font-bold text-[#EF6503]">50+</div>
                 <p className="mt-3 text-gray-700">Satisfied Clients</p>
               </div>
               <div className="p-8 bg-white/70 shadow-md rounded-lg">
-                <div className="text-5xl font-bold text-[#CD7F32]">100%</div>
+                <div className="text-5xl font-bold text-[#EF6503]">100%</div>
                 <p className="mt-3 text-gray-700">Made in Ghana</p>
               </div>
             </div>

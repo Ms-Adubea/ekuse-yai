@@ -4,7 +4,7 @@ import welding from '../../../assets/images/welding.jpeg';
 import cuttingMetal from '../../../assets/images/cutting-metal-with-plasma-equipment-plant.jpg';
 import blackMan from '../../../assets/images/black-man.jpg';
 import portraitMan from '../../../assets/images/portrait-man.jpg';
-import slider5 from '../../../assets/images/slider5.jpg';
+import slider5 from '../../../assets/images/ai-eme4.webp';
 
 const images = [
   welding,
@@ -46,7 +46,7 @@ const Hero = () => {
         </p>
         <a
           href="#gallery"
-          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#CD7F32] hover:bg-orange-700"
+          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#EF6503] hover:bg-orange-700"
         >
           Explore Our Products
           <FaArrowRight className="ml-2" />

@@ -13,7 +13,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import davidInnovator from "../../../assets/images/innovator-removebg.png";
-import bgImage from "../../../assets/images/bg-img.jpg"; // Import background image
+// import bgImage from "../../../assets/images/bg-img.jpg"; // Import background image
 import AnimatedSection from "../../../components/AnimatedSection";
 
 const AboutInnovator = () => {
@@ -29,7 +29,7 @@ const AboutInnovator = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="lg:text-center">
-            <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
+            <h2 className="text-base text-[#EF6503] font-semibold tracking-wide uppercase">
               Our Story
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -47,7 +47,7 @@ const AboutInnovator = () => {
                 className="h-full w-full object-cover rounded-lg"
               />
               {/* Glassy Hover Effect Under Image */}
-              <div className="absolute inset-x-0 bottom-0 h-24 bg-white/30 backdrop-blur-md rounded-b-lg opacity-0 transition-opacity duration-500 hover:opacity-100"></div>
+              {/* <div className="absolute inset-x-0 bottom-0 h-24 bg-white/30 backdrop-blur-md rounded-b-lg opacity-0 transition-opacity duration-500 hover:opacity-100">David</div> */}
             </div>
           </AnimatedSection>
 
@@ -75,28 +75,28 @@ const AboutInnovator = () => {
               <a
                 href="https://x.com/DavidSam232743?t=0ep7eVDcmNgi7V47wxX06g&s=08"
                 target="_blank"
-                className="text-[#CD7F32] hover:text-orange-700 hover:scale-110 transition-transform duration-200"
+                className="text-[#EF6503] hover:text-orange-700 hover:scale-110 transition-transform duration-200"
               >
                 <FaTwitter className="h-6 w-6" />
               </a>
               <a
                 href="https://www.facebook.com/share/1AyriFF8qA/"
                 target="_blank"
-                className="text-[#CD7F32] hover:text-orange-700 hover:scale-110 transition-transform duration-200"
+                className="text-[#EF6503] hover:text-orange-700 hover:scale-110 transition-transform duration-200"
               >
                 <FaFacebook className="h-6 w-6" />
               </a>
               <a
                 href="https://www.instagram.com/davidsam8882?igsh=NGYxenZsMmhvb2hp"
                 target="_blank"
-                className="text-[#CD7F32] hover:text-orange-700 hover:scale-110 transition-transform duration-200"
+                className="text-[#EF6503] hover:text-orange-700 hover:scale-110 transition-transform duration-200"
               >
                 <FaInstagram className="h-6 w-6" />
               </a>
               <a
                 href="https://wa.me/+233547850760"
                 target="_blank"
-                className="text-[#CD7F32] hover:text-orange-700 hover:scale-110 transition-transform duration-200"
+                className="text-[#EF6503] hover:text-orange-700 hover:scale-110 transition-transform duration-200"
               >
                 <FaWhatsapp className="h-6 w-6" />
               </a>

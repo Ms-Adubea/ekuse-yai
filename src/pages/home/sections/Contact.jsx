@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { FiPhone, FiMail, FiMapPin, FiSend } from 'react-icons/fi';
 import { FaWhatsapp, FaFacebook, FaTwitter, FaInstagram, FaTiktok } from 'react-icons/fa';
-import contactBg from '../../../assets/images/slider5.jpg';
+import contactBg from '../../../assets/images/portrait-man.jpg';
 import AnimatedSection from '../../../components/AnimatedSection';
 
 const Contact = () => {
@@ -75,7 +75,7 @@ const Contact = () => {
           <AnimatedSection>
             {/* Header */}
             <div className="text-center mb-16">
-              <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
+              <h2 className="text-base text-[#EF6503] font-semibold tracking-wide uppercase">
                 Get In Touch
               </h2>
               <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
@@ -98,13 +98,13 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <div className="bg-[#CD7F32] p-3 rounded-full">
+                    <div className="bg-[#EF6503] p-3 rounded-full">
                       <FiPhone className="h-6 w-6 text-white" />
                     </div>
                   </div>
                   <div className="ml-4">
                     <p className="text-lg font-medium text-white">Phone</p>
-                    <a href="tel:+233547850760" className="text-gray-300 hover:text-[#CD7F32]">
+                    <a href="tel:+233547850760" className="text-gray-300 hover:text-[#EF6503]">
                       +233 54 785 0760
                     </a>
                   </div>
@@ -112,13 +112,13 @@ const Contact = () => {
 
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <div className="bg-[#CD7F32] p-3 rounded-full">
+                    <div className="bg-[#EF6503] p-3 rounded-full">
                       <FiMail className="h-6 w-6 text-white" />
                     </div>
                   </div>
                   <div className="ml-4">
                     <p className="text-lg font-medium text-white">Email</p>
-                    <a href="mailto:ekusemetalengineering@gmail.com" className="text-gray-300 hover:text-[#CD7F32]">
+                    <a href="mailto:ekusemetalengineering@gmail.com" className="text-gray-300 hover:text-[#EF6503]">
                       ekusemetalengineering@gmail.com
                     </a>
                   </div>
@@ -126,7 +126,7 @@ const Contact = () => {
 
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <div className="bg-[#CD7F32] p-3 rounded-full">
+                    <div className="bg-[#EF6503] p-3 rounded-full">
                       <FiMapPin className="h-6 w-6 text-white" />
                     </div>
                   </div>
@@ -143,13 +143,13 @@ const Contact = () => {
               <div className="mt-8">
                 <p className="text-lg font-medium text-white mb-4">Follow Us</p>
                 <div className="flex space-x-4">
-                  <a href="https://www.facebook.com/share/1AyriFF8qA/" target="_blank" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <a href="https://www.facebook.com/share/1AyriFF8qA/" target="_blank" className="bg-[#EF6503] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
                     <FaFacebook className="h-5 w-5" />
                   </a>
-                  <a href="https://www.tiktok.com/@user8612852865311?is_from_webapp=1&sender_device=pc" target="_blank" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <a href="https://www.tiktok.com/@user8612852865311?is_from_webapp=1&sender_device=pc" target="_blank" className="bg-[#EF6503] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
                     <FaTiktok className="h-5 w-5" />
                   </a>
-                  <a href="https://www.instagram.com/ekuse_metal_engineering/" target="_blank" className="bg-[#CD7F32] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
+                  <a href="https://www.instagram.com/ekuse_metal_engineering/" target="_blank" className="bg-[#EF6503] p-3 rounded-full text-white hover:bg-orange-700 transition-colors">
                     <FaInstagram className="h-5 w-5" />
                   </a>
                 </div>
@@ -190,7 +190,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
-                      placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+                      placeholder-gray-400 text-white focus:border-[#EF6503] focus:ring-[#EF6503] 
                       text-base transition-colors"
                     required
                   />
@@ -208,7 +208,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
-                      placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+                      placeholder-gray-400 text-white focus:border-[#EF6503] focus:ring-[#EF6503] 
                       text-base transition-colors"
                     required
                   />
@@ -226,7 +226,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
-                      placeholder-gray-400 text-white focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+                      placeholder-gray-400 text-white focus:border-[#EF6503] focus:ring-[#EF6503] 
                       text-base transition-colors"
                   />
                 </div>
@@ -243,7 +243,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="mt-2 block w-full py-3 px-4 rounded-md bg-white bg-opacity-20 border-transparent 
-                      placeholder-gray-400 text-black focus:border-[#CD7F32] focus:ring-[#CD7F32] 
+                      placeholder-gray-400 text-black focus:border-[#EF6503] focus:ring-[#EF6503] 
                       text-base transition-colors"
                     required
                   ></textarea>
@@ -253,8 +253,8 @@ const Contact = () => {
                   <button
                     type="submit"
                     className="px-8 py-2 border border-transparent 
-                      text-base font-medium rounded-md text-white bg-[#CD7F32] 
-                      hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CD7F32]
+                      text-base font-medium rounded-md text-white bg-[#EF6503] 
+                      hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#EF6503]
                       transition-all duration-200 mx-auto w-1/2"
                   >
                     <FiSend className="inline mr-2" />

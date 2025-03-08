@@ -3,9 +3,9 @@ import Hero from './sections/Hero';
 import AboutUs from './sections/AboutUs';
 import AboutInnovator from './sections/AboutInnovator';
 import AboutProducts from './sections/AboutProducts';
-import Testimonials from './sections/Testimonials';
 import Gallery from './sections/Gallery';
 import Contact from './sections/Contact';
+import Services from './sections/Services';
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
         <AboutUs />
         <AboutInnovator />
         <AboutProducts />
-        <Testimonials />
+        <Services />
         <Gallery />
         <Contact />
     </div>

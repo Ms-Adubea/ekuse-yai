@@ -130,7 +130,7 @@ const Gallery = () => {
         <AnimatedSection>
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-base text-[#CD7F32] font-semibold tracking-wide uppercase">
+            <h2 className="text-base text-[#EF6503] font-semibold tracking-wide uppercase">
               Our Portfolio
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -151,7 +151,7 @@ const Gallery = () => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-2 rounded-full transition-colors duration-300 ${
                   selectedCategory === category.id
-                    ? 'bg-[#CD7F32] text-white'
+                    ? 'bg-[#EF6503] text-white'
                     : 'bg-white text-gray-600 hover:bg-gray-100'
                 }`}
               >
@@ -169,13 +169,13 @@ const Gallery = () => {
               <div className="absolute top-1/2 w-full flex justify-between -mt-8 z-10 px-2">
                 <button
                   onClick={() => sliderRef.current.slickPrev()}
-                  className="bg-white p-3 rounded-full shadow-md hover:bg-[#CD7F32] hover:text-white transition-colors duration-300"
+                  className="bg-white p-3 rounded-full shadow-md hover:bg-[#EF6503] hover:text-white transition-colors duration-300"
                 >
                   <FaArrowLeft />
                 </button>
                 <button
                   onClick={() => sliderRef.current.slickNext()}
-                  className="bg-white p-3 rounded-full shadow-md hover:bg-[#CD7F32] hover:text-white transition-colors duration-300"
+                  className="bg-white p-3 rounded-full shadow-md hover:bg-[#EF6503] hover:text-white transition-colors duration-300"
                 >
                   <FaArrowRight />
                 </button>
@@ -201,7 +201,7 @@ const Gallery = () => {
                       <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <button
                           onClick={() => setSelectedImage(product)}
-                          className="p-3 bg-white rounded-full text-[#CD7F32] hover:bg-[#CD7F32] hover:text-white transition-colors duration-300"
+                          className="p-3 bg-white rounded-full text-[#EF6503] hover:bg-[#EF6503] hover:text-white transition-colors duration-300"
                         >
                           <FaExpand className="w-6 h-6" />
                         </button>
@@ -211,7 +211,7 @@ const Gallery = () => {
                       <h3 className="text-lg font-bold text-gray-900 mb-1 truncate">
                         {product.name}
                       </h3>
-                      <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-[#CD7F32]">
+                      <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-[#EF6503]">
                         {categories.find((cat) => cat.id === product.category).name}
                       </span>
                     </div>
@@ -253,7 +253,7 @@ const Gallery = () => {
               <div className="p-6 border-t border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{selectedImage.name}</h3>
                 <div className="mb-3">
-                  <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-[#CD7F32]">
+                  <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-[#EF6503]">
                     {categories.find((cat) => cat.id === selectedImage.category).name}
                   </span>
                 </div>

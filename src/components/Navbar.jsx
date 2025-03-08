@@ -45,7 +45,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white text-[#CD7F32] p-4 shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white text-[#EF6503] p-4 shadow-md font-serif">
       <div className="container mx-auto flex justify-between items-center">
         
         {/* Left side - Links */}
@@ -99,11 +99,11 @@ const Navbar = () => {
           </li>
           <li>
             <a 
-              href="#testimonials" 
-              onClick={() => handleClick("testimonials")}
-              className={`hover:text-yellow-400 ${activeLink === "testimonials" ? "text-yellow-400 border-b-2 border-yellow-400" : ""}`}
+              href="#services" 
+              onClick={() => handleClick("services")}
+              className={`hover:text-yellow-400 ${activeLink === "services" ? "text-yellow-400 border-b-2 border-yellow-400" : ""}`}
             >
-              Testimonials
+              Services
             </a>
           </li>
           <li>
@@ -177,11 +177,11 @@ const Navbar = () => {
             </li>
             <li>
               <a 
-                href="#testimonials" 
-                onClick={() => handleClick("testimonials")}
-                className={`flex items-center hover:text-yellow-400 ${activeLink === "testimonials" ? "text-yellow-400" : ""}`}
+                href="#services" 
+                onClick={() => handleClick("services")}
+                className={`flex items-center hover:text-yellow-400 ${activeLink === "services" ? "text-yellow-400" : ""}`}
               >
-                <FaStar className="mr-2" /> Testimonials
+                <FaStar className="mr-2" /> Services
               </a>
             </li>
             <li>
