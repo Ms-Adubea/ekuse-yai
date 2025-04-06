@@ -129,7 +129,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button 
           onClick={() => setMenuOpen(!menuOpen)} 
-          className="md:hidden text-[#CD7F32] text-2xl focus:outline-none"
+          className="md:hidden text-[#EF6503] text-2xl focus:outline-none"
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
