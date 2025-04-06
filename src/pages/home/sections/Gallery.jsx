@@ -8,7 +8,7 @@ import blackMan from '../../../assets/images/black-man.jpg';
 import cuttingMetal from '../../../assets/images/cutting-metal-with-plasma-equipment-plant.jpg';
 import portraitMan from '../../../assets/images/portrait-man.jpg';
 import slider5 from '../../../assets/images/slider5.jpg';
-import ginEquipment from '../../../assets/images/ginger-slicer2.jpg';
+import ginEquipment from '../../../assets/images/official-gingerimage.jpg';
 import cashewRoaster from '../../../assets/images/cashew-roaster.jpg'
 import AnimatedSection from '../../../components/AnimatedSection';
 import ekuseOven from '../../../assets/images/ai-oven4.png'

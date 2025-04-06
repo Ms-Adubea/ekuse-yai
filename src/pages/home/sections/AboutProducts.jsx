@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaCheckCircle, FaSearchPlus, FaTools, FaCog, FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import ginEquipment from '../../../assets/images/ginger-slicer.jpg';
+import ginEquipment from '../../../assets/images/official-gingerimage.jpg';
 import gingerMachine from '../../../assets/images/ginger-slicer2.jpg';
 import gingerVideo from '../../../assets/videos/ginger-slicing-video.mp4'; // Import the video
 import AnimatedSection from '../../../components/AnimatedSection';

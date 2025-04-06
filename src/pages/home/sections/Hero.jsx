@@ -4,7 +4,7 @@ import welding from '../../../assets/images/welding.jpeg';
 import cuttingMetal from '../../../assets/images/cutting-metal-with-plasma-equipment-plant.jpg';
 import blackMan from '../../../assets/images/black-man.jpg';
 import portraitMan from '../../../assets/images/portrait-man.jpg';
-import slider5 from '../../../assets/images/ai-eme4.webp';
+import slider5 from '../../../assets/images/cutting-metal-with-plasma-equipment-plant.jpg';
 
 const images = [
   welding,
